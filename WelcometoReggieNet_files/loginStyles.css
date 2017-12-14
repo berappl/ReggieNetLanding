@@ -1,0 +1,304 @@
+/* CSS Document */
+html{
+	background: url(images/bg_grd.png) repeat-x scroll 0 0 #cc0000;
+}
+body,td,th {
+    font-family: Verdana, Geneva, sans-serif;
+}
+body {
+	border-top: 0px solid #26231f;
+	background: url(images/bg_grd.png) repeat-x scroll 0 0 #cc0000;
+	margin-top:0px;
+	margin-left:0px;
+	margin-right:0px;
+	text-align:center;
+	height: auto;
+}
+
+#gatewayPage{
+	margin-top: 0px; 
+	margin-bottom: 30px; 
+	background: transparent;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	font-size:.8em;
+	border: 0px solid #000000;
+	position:absolute;
+	left:50%;
+	width:960px;
+	margin-left:-480px;
+	padding: 0px;		
+}
+
+iframe{
+	border-collapse: collapse;
+	border-width: 0;
+	border: none;
+	/*position: relative;
+	left: -3px;*/
+}
+
+h1 {
+	
+	/*font-size:18px;
+	color:#FFF;
+	text-align:left;*/
+	
+	}
+
+h2 {
+    font-size:16px; 
+    text-align:left; 
+    font-weight:bold;
+ 	 padding: 0px;
+	}
+h3
+   { 
+    font-size:12px; 
+    text-align:left; 
+    font-weight:normal; 
+	 padding: 0px;
+   }
+
+ul {
+	 padding: 0px;
+}
+
+li{
+	list-style: none;	
+	background: #e3efff;
+	margin: 3px;
+	padding-right: 10px;
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+li:hover{
+	background: #c0d0e5;
+	margin: 3px;
+}
+
+label {
+	font-size:13px; 
+    text-align:left; 
+    font-weight:bold;
+	 padding-right: 20px;
+}
+
+form{
+	 position: relative;
+	 top: -10px;
+}
+
+#loginBlock{
+	 width:240px;  
+    height:170px;
+	 float: left;
+	 font-size: 0.7em;
+	 text-align: left;
+	 padding-left: 10px;
+	 position: relative;
+	 top: 50px;
+}
+
+.logoED{ 
+	 background-color: transparent;
+    width:930px;  
+    height:500px;
+	/*height:560px;*/
+	 border-bottom: 0px solid #26231f;
+	
+}
+
+#inner_content{ 
+     background:#FFFFFF;  
+	  width:960px;  
+	  border: 1px solid #cccccc;
+	  height: auto;
+}
+
+.logoCON {
+	width:960px;
+	height: 94px;
+	/*float: left;*/
+	padding-bottom: 15px;	
+	background: url(images/bg_seal.png) no-repeat scroll center -100px transparent;
+	}
+
+#leftimg{
+	float: left;
+	padding-top: 13px;
+	}
+	
+#rightimg{
+	float: right;
+	padding-top: 7px;
+	}
+	 
+	 
+.inlineBlock{
+	float: left;
+}
+
+#spaser{
+	width: 18px;  
+   height: 20px;
+}
+
+
+ a{ 
+    text-decoration:none; 
+    color:#555;
+	 font-size:13px; 
+	 font-weight: bold;
+}
+
+a:hover{ 
+    text-decoration:none; 
+    color:#34679a;
+}
+
+a span, li span{ 
+   position: relative;
+	top: -2px;
+}
+
+
+#banner_inst_right{
+	position: relative;
+	top: -20px;
+}
+
+#bottompage{
+	height: 40px;
+}
+
+#eid, #pw {
+	padding: 0px;
+	margin-bottom: 5px;
+   width: 183px;
+}
+
+#eid {
+	/*position: relative;
+	left: 0px;*/
+}
+
+#butt{
+	padding: 0px;
+	position: relative;
+	left: 62px;
+}
+
+#gatewayTools {
+	float: left;
+   width: 365px;
+	padding-right: 10px;
+	padding-top: 40px;
+	text-align: left;
+}
+
+#welcomeMessage{
+	
+	float: left;
+	/*float: right;*/
+   width: 650px;
+	text-align: left;
+	padding-right: 0px;
+	/*padding-right: 30px;*/
+	padding-left: 20px;
+	padding-top: 70px;
+	padding-bottom: 30px;
+	
+}
+
+#welcomeTitle{
+	color:#666666;
+	font-size:24px; 
+   text-align:left; 
+   font-weight:bold;
+}
+
+#welcomeText{
+	color:#555;
+	font-size:16px; 
+	line-height:24px;
+   text-align:left; 
+	padding-top: 20px;
+}
+
+
+
+
+
+.module-box {
+    background: url(images/mod-int-tile-222.png) repeat-y scroll 0 0 #FFFFFF;
+    margin: 10px;
+    padding: 0;
+	 width: 222px;
+}
+
+
+.module-top {
+    background: url(images/mod-home-clean-top.png) no-repeat scroll 0 0 #FFFFFF;
+    padding: 10px 15px 0;
+}
+
+
+.module-top.blue {
+    background: url(images/mod-int-blue-cap-222.png) no-repeat scroll 0 0 #366CA3;
+    height: auto !important;
+    min-height: 40px;
+    padding: 0 15px;
+}
+
+.module-top.blue h2{
+    color: #ffffff;
+	 font-size: 17px;
+    padding: 10px 15px 15px 0px;
+	 position: relative;
+	 top: 5px;
+	 /*top: 13px;*/
+}
+
+.module-content {
+    background: url(images/mod-int-clean-bot-222.png) no-repeat scroll 0 100% transparent;
+    padding: 5px 15px 15px 20px;
+    position: relative;
+	 left: 0px;
+}
+
+span.link-list li {
+    background: url(images/bullet-blue-plus.png) no-repeat scroll 0 5px transparent;
+    padding-left: 14px;
+	 position: relative;
+	 top: 5px;
+}
+
+span.link-list ul {
+    list-style: none outside none;
+	 text-align: left;
+}
+
+.module-content ul {
+    list-style: none outside none;
+    margin: 0;
+    padding: 0;
+}
+
+a.login-link { 
+margin: auto; 
+display: block; 
+width: 198px; 
+height: 70px; 
+background: url(images/CentralLogin_button.png) no-repeat 0px 0px; 
+position: relative;
+left: -8px;
+}
+a:hover.login-link { background-position: 0px -70px; }
+a:focus.login-link, 
+a:active.login-link { background-position: 0px -140px; }
+a.login-link.alt-login, 
+a:hover.login-link.alt-login, 
+a:active.login-link.alt-login,
+a:focus.login-link.alt-login { background: url(images/CentralLogin_button2.png) no-repeat 0px 0px; }
