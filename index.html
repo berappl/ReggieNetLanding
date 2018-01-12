@@ -27,9 +27,9 @@ function ISUAlerts(){
 		  for(var i = 0; i < entries.length; i++){
 			var entry = entries[i];
 			//console.dir(entry);
-			if ( entry.title.toUpperCase().indexOf("NETWORK") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1 )
+			if ( entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1 )
 			{
-				if (entry.title.toUpperCase().indexOf("NETWORK") > -1 ){
+				if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 ){
 					casdown=1;
 				}
 				html +=("<li><a href='" + entry.link + "'><b>" + entry.title + "</b></a><br/><font size='-1'>" + entry.description+"</font></li>");
@@ -37,7 +37,7 @@ function ISUAlerts(){
 		  }
 		  //alert ("HTML to insert: " + html);
 		  if (html.length < 1){
-			html="<li><H1>Gladly we Learn, Teach and Collaborate</h1>Welcome to ReggieNet, Illinois State University's newest web-based learning and collaboration system. ReggieNet is powered by the University's installation of the Sakai learning management system, a feature-rich environment that provides tools for communication, assignment submission, tests and quizzes, project collaboration, and much more. Login to ReggieNet today and experience the potential of next generation collaborative learning environments.<br><br>To log in to the system, please click on the CentralLogin button and sign in using your ULID and ULID password.</li>";
+			html="<li>Test to see if this is working</li>";
 		  }else if (casdown){
 		  	document.getElementById("alternatelink").innerHTML = "<a href='https://reggienetdev.illinoisstate.edu/xsl-portal/xlogin'>Click here for alternate login screen if Central Login is down</a>";
 			document.getElementsByClassName("login-link")[0].className += " alt-login";
@@ -60,6 +60,12 @@ function ISUAlerts(){
 				<img id="rightimg" src="./WelcometoReggieNet_Files/logo_right.png" width="200" alt="" height="57" title="" border="0">
 				</div>
         <div id="inner_content">
+		<div id="alert_banner">
+			<ul id="techalertrss">
+				<li>Loading...</li>
+			</ul>
+			<h4 id="alternatelink"></h4>
+		</div>
 		   
 	   	<div class="logoED">
 
@@ -76,7 +82,7 @@ function ISUAlerts(){
 						<br/><label for="pw">Password</label><input name="pw" id="pw" type="password" />
 						<br/><input id="butt" type="image" value="submit" src="images/loginButton.gif" alt="Log in" />
 						</form-->
-<a class="login-link" href="https://reggienetdev.illinoisstate.edu/xsl-portal/xlogin" title="CentralLogin" alt="click here to log in" enctype="application/x-www-form-urlencoded" target="_parent"></a><br><br>
+<a class="login-link" href="https://reggienetdev.illinoisstate.edu/" title="CentralLogin" alt="click here to log in" enctype="application/x-www-form-urlencoded" target="_parent"></a><br><br>
 			
 						</div>
 						</div>
@@ -84,7 +90,7 @@ function ISUAlerts(){
 
 
 						<!--block two start-->
-						<div class="module-box">
+						<!--<div class="module-box">
 						<div class="module-top blue">
 						<h2>Gateway Tools</h2>
 						</div>
@@ -95,19 +101,16 @@ function ISUAlerts(){
 							</ul>
 						</span>
 						</div>
-						</div>
-						<!--block two end-->
+						</div>-->
+						<!--block two end--> 
 				
 				</div>
 				<!--login block end-->
 				<!--welcome block start-->
 				<div id="welcomeMessage">
-			    <!-- <div id="welcomeTitle">ReggieNet Alerts</div> -->
-			   	<div id="welcomeText">
-			<ul id="techalertrss">
-				<li>Loading...</li>
-			</ul>
-			<h4 id="alternatelink"></h4>
+					<div id="welcomeTitle"><H1>Gladly we Learn, Teach and Collaborate</H1></div>
+			   	<div id="welcomeText">Welcome to ReggieNet, Illinois State University's newest web-based learning and collaboration system. ReggieNet is powered by the University's installation of the Sakai learning management system, a feature-rich environment that provides tools for communication, assignment submission, tests and quizzes, project collaboration, and much more. Login to ReggieNet today and experience the potential of next generation collaborative learning environments.<br><br>To log in to the system, please click on the CentralLogin button and sign in using your ULID and ULID password.
+			
 </div>
 				<br><br>
 
