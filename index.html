@@ -7,7 +7,8 @@
 <title>Welcome to ReggieNet</title>
 <link href="./WelcometoReggieNet_Files/loginStyles.css" rel="stylesheet" type="text/css">
 <link href="./WelcometoReggieNet_Files/portal.css" rel="stylesheet" type="text/css">
-<script src="./WelcometoReggieNet_Files/saved_resource" type="text/javascript">// JQUERY //</script><script type="text/javascript" src="./WelcometoReggieNet_files/customize.php"></script>
+<script src="./WelcometoReggieNet_Files/saved_resource" type="text/javascript">// JQUERY //</script>
+<script type="text/javascript" src="./WelcometoReggieNet_files/customize.php"></script>
 <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
 <script LANGUAGE="JavaScript">
 function ISUAlerts(){
@@ -41,6 +42,10 @@ function ISUAlerts(){
 		  }else if (casdown){
 		  	document.getElementById("alternatelink").innerHTML = "<br><br><a href='https://reggienetdev.illinoisstate.edu/xsl-portal/xlogin'>Central Login is currently unavailable. Click here to go to the alternate login page.</a><br><br><br>";
 			document.getElementsByClassName("login-link")[0].className += " alt-login";
+			$(document).ready(function(){
+    $(".login-link").hide();
+    $(".alt-login).removeClass("visuallyhidden");
+})  
 		  }
 
 		//  document.getElementById("techalertrss").innerHTML = html;
