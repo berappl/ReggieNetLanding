@@ -32,8 +32,8 @@
                     for (var i = 0; i < entries.length; i++) {
                         var entry = entries[i];
                         //console.dir(entry);
-                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("STARREZ") > -1) {
-                            if (entry.title.toUpperCase().indexOf("STARREZ") > -1) {
+                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("PHISHING") > -1) {
+                            if (entry.title.toUpperCase().indexOf("PHISHING") > -1) {
                                 casdown = 1;
                             }
                             html += ("<li><a href='" + entry.link + "'><b>" + entry.title + "</b></a><br/><font size='-1'>" + entry.description + "</font></li>");
@@ -43,7 +43,7 @@
                     if (html.length < 1) {
                         html = "<li></li>";
                     } else if (casdown) {
-                        document.getElementById("alternatelink").innerHTML = "<br><br>Central Login is currently unavailable. To access alternate login page, use <a href='https://reggienetdev.illinoisstate.edu/xsl-portal/xlogin' class='link'>ReggieNet Login</a> link.<br><br><br>";
+                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/xsl-portal/xlogin' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
                         // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
                     }
 
