@@ -43,11 +43,12 @@
                     if (html.length < 1) {
                         html = "<li></li>";
                     } else if (casdown) {
+                        document.getElementById("alternatelink").setAttribute("role", "alert");
                         document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
                         $(document).ready(function(){
     $(".login-link").hide();
     $(".alt-login").removeClass("visuallyhidden");
-      document.getElementById("alternatelink").setAttribute("role", "alert");
+      
 })
                             // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
                     }
