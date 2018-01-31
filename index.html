@@ -36,12 +36,12 @@
                             if (entry.title.toUpperCase().indexOf("PHISHING") > -1) {
                                 casdown = 1;
                             }
-                            html += ("<li><a href='" + entry.link + "'></li>"); //<b>" + entry.title + "</b></a><br/><font size='-1'>" + entry.description + "</font>
+                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); <!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
                         }
                     }
                     //alert ("HTML to insert: " + html);
                     if (html.length < 1) {
-                        html = "<li></li>";
+                        html = ("<li><a href='" + entry.link + "'></li>");
                     } else if (casdown) {
                         document.getElementById("alternatelink").setAttribute("role", "alert");
                         document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
@@ -53,7 +53,7 @@
                             // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
                     }
 
-						document.getElementById("techalertrss").innerHTML = html;
+						document.getElementById("ReggieNetAlerts").innerHTML = html;
                 }
             })
         }
@@ -129,9 +129,10 @@
                 <div class="module-top blue">
                 <h2>ReggieNet Alerts</h2>
                 </div>
-                <div class="module-content"><span class="link-list">	
+                <div class="module-content">
+				<span class="link-list">	
 				<ul class="navlist">
-                <li class="></li>
+                <li id="ReggieNetAlerts"></li>
                 </ul>
                 </span>
                 </div>
