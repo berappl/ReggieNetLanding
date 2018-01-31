@@ -36,7 +36,7 @@
                             if (entry.title.toUpperCase().indexOf("PHISHING") > -1) {
                                 casdown = 1;
                             }
-                            html += ("<li><a href='" + entry.link + "'><b>" + entry.title + "</b></a><br/><font size='-1'>" + entry.description + "</font></li>");
+                            html += ("<li><a href='" + entry.link + "'></li>"); //<b>" + entry.title + "</b></a><br/><font size='-1'>" + entry.description + "</font>
                         }
                     }
                     //alert ("HTML to insert: " + html);
@@ -53,7 +53,7 @@
                             // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
                     }
 
-                    //  document.getElementById("techalertrss").innerHTML = html;
+						document.getElementById("techalertrss").innerHTML = html;
                 }
             })
         }
@@ -131,7 +131,7 @@
                 </div>
                 <div class="module-content"><span class="link-list">	
 				<ul class="navlist">
-                <li></li>
+                <li class="></li>
                 </ul>
                 </span>
                 </div>
