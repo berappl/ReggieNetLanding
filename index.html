@@ -41,7 +41,7 @@
                     }
                     //alert ("HTML to insert: " + html);
                     if (html.length < 1) {
-                        html = ("<li><a href='" + entry.link + "'></li>");
+                        html = ("<li>No alerts are active at this time</li>");
                     } else if (casdown) {
                         document.getElementById("alternatelink").setAttribute("role", "alert");
                         document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
@@ -144,12 +144,12 @@
             <!--welcome block start-->
             <div id="welcomeMessage">
                 <div id="welcomeTitle">Gladly we Learn, Teach and Collaborate</div>
-                <div id="welcomeText">Welcome to ReggieNet, Illinois State University's newest web-based learning and
+                <div id="welcomeText"><p>Welcome to ReggieNet, Illinois State University's newest web-based learning and
                     collaboration system. ReggieNet is powered by the University's installation of the Sakai learning
                     management system, a feature-rich environment that provides tools for communication, assignment
                     submission, tests and quizzes, project collaboration, and much more. Login to ReggieNet today and
                     experience the potential of next generation collaborative learning environments.<br><br>To log in to
-                    the system, please click on the CentralLogin button and sign in using your ULID and ULID password.
+                    the system, please click on the CentralLogin button and sign in using your ULID and ULID password.</p>
 
                 </div>
                 <br><br>
@@ -175,7 +175,7 @@
             <!-- end include Bottom -->
         </div>
         <div class="sakaiCopyrightInfo" style="margin-top: 0"><img border="0" alt="Illinois State University"
-                                                                   src="./WelcometoReggieNet_Files/footerReggieGrey.png">
+                                                                   src="./WelcometoReggieNet_Files/footerReggieGrey.png" class="reggie-footer">
             <div id="isu_bold"><span class="normal">©</span> 2015 Illinois State University</div>
             <a href="http://illinoisstate.edu/diversity/" target="_blank">An equal opportunity/affirmative action
                 university encouraging diversity.</a> <br> <a

@@ -16,7 +16,7 @@ body {
 }
 
 #gatewayPage{
-	margin-top: 0px; 
+	margin-top: -27px; 
 	margin-bottom: 30px; 
 	background: transparent;
 	font-family: Geneva, Arial, Helvetica, sans-serif;
@@ -104,7 +104,7 @@ form{
 .logoED{ 
 	 background-color: transparent;
      width:930px;
-     height:500px;
+     height:650px;
 	/*height:560px;*/
 	 border-bottom: 0px solid #26231f;
 	
@@ -127,12 +127,12 @@ form{
 
 #leftimg{
 	float: left;
-	padding-top: 13px;
+	padding-top: 25px;
 	}
 	
 #rightimg{
 	float: right;
-	padding-top: 7px;
+	padding-top: 19px;
 	}
 	 
 	 
@@ -268,7 +268,7 @@ a span, li span{
 .techalertrss {
 	background: #f6d947;
 	list-style: none;
-	margin: 3px;
+	margin: 0px;
 	/* padding-right: 10px;
 	padding-left: 10px;
 	padding-top: 5px;
@@ -323,18 +323,18 @@ a.reggie-login {
 	-moz-transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
 	-o-transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
 	transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
-	background-color: transparent;
-	border-color: #c00;
-	border-style: solid;
-	color: #c00;
+	background-color: #c00;
+	border: none;
+	color: white;
 	font-size: 18px;
 	border-width: 3px;
 	width: calc(100% - 1em);
 }
 
+.reggie-footer {margin-top: -25px;}
+
 .reggie-login:visited {
-	color: maroon;
-	border-color: maroon;
+	color: white;
 }
 .reggie-login:focus, .reggie-login:hover {
 	background-color: maroon;
