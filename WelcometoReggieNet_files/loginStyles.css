@@ -2,7 +2,7 @@
 html{
 	background: url(images/bg_grd.png) repeat-x scroll 0 0 #cc0000;
 }
-body,td,th,p {
+body,td,th {
     font-family: Verdana, Geneva, sans-serif;
 }
 body {
@@ -342,10 +342,12 @@ a.reggie-login {
 	color: white;
 }
 
-p{
+.p{
 	font-size: 13px;
 	font-weight: bold;
 	color: #333;
+	font-family: Verdana, Geneva, sans-serif;
+	
 }
 
 .link{
