@@ -2,7 +2,7 @@
 html{
 	background: url(images/bg_grd.png) repeat-x scroll 0 0 #cc0000;
 }
-body,td,th {
+body,td,th,p {
     font-family: Verdana, Geneva, sans-serif;
 }
 body {
