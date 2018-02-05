@@ -32,8 +32,8 @@
                     for (var i = 0; i < entries.length; i++) {
                         var entry = entries[i];
                         //console.dir(entry);
-                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRALLOGIN") > -1) {
-                            if (entry.title.toUpperCase().indexOf("CENTRALLOGIN") > -1) {
+                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("PHISHING") > -1) {
+                            if (entry.title.toUpperCase().indexOf("PHISHING") > -1) {
                                 casdown = 1;
                             }
                             html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); <!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
@@ -42,11 +42,15 @@
                     //alert ("HTML to insert: " + html);
                     if (html.length < 1) {
                         html = ("<li>No alerts are active at this time</li>");
+						$(document).ready(function(){
+						$(".reggie-login").hide();
+						})
                     } else if (casdown) {
-                        document.getElementById("alternatelink").setAttribute("role", "alert");
-                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienettest.illinoisstate.edu/x/JmFxxn' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
-                        $(document).ready(function(){
+						document.getElementById("alternatelink").setAttribute("role", "alert");
+                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
+						$(document).ready(function(){
     $(".login-link").hide();
+	$(".reggie-login").show();
     $(".alt-login").removeClass("visuallyhidden");
       
 })
@@ -82,8 +86,6 @@
     <span class="iguide-link-divider"></span><a id="iguide-my-link" title="My Illinois State"
                                                 href="http://my.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage"><img
         src="./WelcometoReggieNet_Files/my-red-dark.png" alt="My"></a></div>
-
-
 <div id="gatewayPage">
     <div class="logoCON">
         <img id="leftimg" src="./WelcometoReggieNet_Files/reggienet.svg" width="280" alt="ReggieNet" title=""
@@ -98,13 +100,9 @@
             </ul>
 
         </div>
-
         <h1 class="visuallyhidden">ReggieNet Login</h1>
-
         <div class="logoED">
-
             <div id="loginBlock">
-
                 <!--block one start-->
                 <div class="module-box">
                     <div class="module-top blue">
@@ -116,14 +114,13 @@
                         <br/><label for="pw">Password</label><input name="pw" id="pw" type="password" />
                         <br/><input id="butt" type="image" value="submit" src="images/loginButton.gif" alt="Log in" />
                         </form-->
-                        <a class="reggie-login" href="https://reggienettest.illinoisstate.edu/x/JmFxxn"
-                           role="button" title="ReggieNetLogin" alt="click here to log in"
+						<a class="login-link" href="/portal/login" title="CentralLogin" alt="click here to log in" enctype="application/x-www-form-urlencoded" target="_parent"></a>
+                        <a class="reggie-login" href="https://reggienetdev.illinoisstate.edu/x/bygYHd"
+						role="button" title="ReggieNetLogin" alt="click here to log in"
                            enctype="application/x-www-form-urlencoded" target="_parent">ReggieNet Login</a><br><br>
                     </div>
                 </div>
                 <!--block one end-->
-
-
                 <!--block two start-->
                 <div class="module-box">
                 <div class="module-top blue">
