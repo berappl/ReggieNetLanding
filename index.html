@@ -36,25 +36,27 @@
                             if (entry.title.toUpperCase().indexOf("CENTRALLOGIN") > -1) {
                                 casdown = 1;
                             }
-                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); <!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
+                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
+							<!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
                         }
                     }
                     //alert ("HTML to insert: " + html);
                     if (html.length < 1) {
                         html = ("<li>No alerts are active at this time</li>");
 						$(document).ready(function(){
-						$(".reggie-login").hide();
+						// $(".reggie-login").hide();
 						})
                     } else if (casdown) {
 						document.getElementById("alternatelink").setAttribute("role", "alert");
                         document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
+						document.getElementById("reggie-login").style.visibility = 'visible';
 						$(document).ready(function(){
     $(".login-link").hide();
-	$(".reggie-login").show();
+    // $(".reggie-login").css({visibility = 'visible'});
     $(".alt-login").removeClass("visuallyhidden");
       
 })
-                            // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
+									// document.getElementsByClassName("reggie-login")[0].className += " alt-login";
                     }
 
 						document.getElementById("ReggieNetAlerts").innerHTML = html;
@@ -115,7 +117,7 @@
                         <br/><input id="butt" type="image" value="submit" src="images/loginButton.gif" alt="Log in" />
                         </form-->
 						<a class="login-link" href="/portal/login" title="CentralLogin" alt="click here to log in" enctype="application/x-www-form-urlencoded" target="_parent"></a>
-                        <a class="reggie-login" href="https://reggienetdev.illinoisstate.edu/x/bygYHd"
+                        <a id="reggie-login" href="https://reggienetdev.illinoisstate.edu/x/bygYHd"
 						role="button" title="ReggieNetLogin" alt="click here to log in"
                            enctype="application/x-www-form-urlencoded" target="_parent">ReggieNet Login</a><br><br>
                     </div>
