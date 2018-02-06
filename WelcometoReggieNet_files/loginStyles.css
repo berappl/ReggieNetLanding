@@ -71,7 +71,7 @@ li{
 	padding-left: 10px;
 	padding-top: 5px;
 	padding-bottom: 5px;
-	font-size: 13px;
+	font-size:13px;
 }
 
 li:hover{
@@ -313,6 +313,29 @@ a:active.login-link.alt-login,
 a:focus.login-link.alt-login { background: url(images/CentralLogin_button2.png) no-repeat 0px 0px; 
 }
 
+#reggie-login {
+	display: inline-block;
+	border-radius: .25em;
+	padding: .5em .15em .5em;
+	text-align: center;
+	text-decoration: none;
+	vertical-align: middle;
+	-webkit-transition: all 475ms cubic-bezier(.000, .000, .580, 1.000);
+	-webkit-transition-delay: 0ms;
+	-moz-transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
+	-o-transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
+	transition: all 475ms cubic-bezier(.000, .000, .580, 1.000) 0ms;
+	background-color: #c00;
+	border: none;
+	color: white;
+	font-size: 18px;
+	border-width: 3px;
+	width: calc(100% - 1em);
+	visibility: hidden;
+	/*display: none;
+	position: absolute; */
+	
+}
 a.reggie-login {
 	display: inline-block;
 	border-radius: .25em;
@@ -331,6 +354,10 @@ a.reggie-login {
 	font-size: 18px;
 	border-width: 3px;
 	width: calc(100% - 1em);
+	visibility: hidden;
+	/*display: none;
+	position: absolute; */
+	
 }
 
 .reggie-footer {margin-top: -25px;}
