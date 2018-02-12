@@ -356,8 +356,8 @@ a.reggie-login {
 	font-size: 18px;
 	border-width: 3px;
 	width: calc(100% - 1em);
-	visibility: hidden;
-	/*display: none;
+	/* visibility: hidden;
+	display: none;
 	position: absolute; */
 	
 }
@@ -412,4 +412,19 @@ a.reggie-login {
 	padding: 0;
 	position: absolute;
 	width: 1px;
+}
+.form_box {
+	position: fixed;
+    top: calc(50% - 15em);
+    left: calc(50% - 15em);
+    width: 29em;
+    min-height: 14em;
+    background: #fff;
+    box-shadow: 0 0 5px rgba(0,0,0,0.25);
+}
+.form_box.h1 {
+	padding: 0.6em;
+    font-size: 1.8em;
+    color: #af0000;
+    text-align: center;
 }
