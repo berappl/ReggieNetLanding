@@ -96,7 +96,7 @@ form{
      height:170px;
 	 float: left;
 	 font-size: 0.7em;
-	 text-align: left;
+	 text-align: center;
 	 padding-left: 10px;
 	 position: relative;
 	 top: 50px;
@@ -315,7 +315,8 @@ a:focus.login-link.alt-login { background: url(images/CentralLogin_button2.png) 
 }
 
 #reggie-login {
-	display: inline-block;
+	/* display: inline-block; */
+	display:none;
 	border-radius: .25em;
 	padding: .5em .15em .5em;
 	text-align: center;
@@ -332,8 +333,8 @@ a:focus.login-link.alt-login { background: url(images/CentralLogin_button2.png) 
 	font-size: 18px;
 	border-width: 3px;
 	width: calc(100% - 1em);
-	visibility: hidden;
-	/*display: none;
+	margin: auto;
+	/* visibility: hidden;
 	position: absolute; */
 	
 }
@@ -366,7 +367,7 @@ a.reggie-login {
 .reggie-login:visited {
 	color: white;
 }
-.reggie-login:focus, .reggie-login:hover {
+#reggie-login:focus, #reggie-login:hover {
 	background-color: maroon;
 	border-color: maroon;
 	color: white;
