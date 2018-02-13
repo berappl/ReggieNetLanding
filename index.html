@@ -1,6 +1,5 @@
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
         "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<!-- saved from url=(0036)https://reggienet.illinoisstate.edu/ -->
 <html lang="en" xmlns="http://www.w3.org/1999/xhtml">
 <script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/prompt.js"></script>
 <head>
@@ -32,8 +31,8 @@
                     for (var i = 0; i < entries.length; i++) {
                         var entry = entries[i];
                         //console.dir(entry);
-                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("PHISHING") > -1) {
-                            if (entry.title.toUpperCase().indexOf("PHISHING") > -1) {
+                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRALLOGIN") > -1) {
+                            if (entry.title.toUpperCase().indexOf("CENTRALLOGIN") > -1) {
                                 casdown = 1;
                             }
                             html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
