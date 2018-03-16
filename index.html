@@ -34,7 +34,7 @@
                         if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {
                             if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {
 				    //Attempting to account for maintenance on Central Login and make sure that if Maintenance is present that we are not changing the page
-				    if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1 &&& entry.title.toUpperCase().indexOf("MAINTENANCE") < -1) {
+				   // if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1 &&& entry.title.toUpperCase().indexOf("MAINTENANCE") < -1) {
                                 casdown = 1;
                             }
                             html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
