@@ -31,8 +31,8 @@
                     for (var i = 0; i < entries.length; i++) {
                         var entry = entries[i];
                         //console.dir(entry);
-                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {
-                            if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {
+                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1){
+                            if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {
                                 casdown = 1;
                             }
                             html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
