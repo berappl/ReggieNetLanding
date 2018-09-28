@@ -32,10 +32,10 @@
                         var entry = entries[i];
                         //console.dir(entry);
 			// To set this page to no longer recognize the "central login maintenance" tech alerts as outages comment out lines 35 and 36 and uncomment lines 37 and 38
-			 if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1){
-                               if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {   
-                      // if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1){
-                      //      if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {
+			 //if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1){
+                              // if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {   
+                           if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1){
+                                 if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {
 				   casdown = 1;
                             }
                             html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
