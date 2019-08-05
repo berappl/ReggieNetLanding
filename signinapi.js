@@ -14,6 +14,7 @@ function formatDate(dateString) {
     };
     return d.toLocaleDateString('en-US', options);
 }
+
 //Pull StatusPage API//
 function setupStatusPage() {
     let CASdown = 0;
@@ -36,20 +37,19 @@ function setupStatusPage() {
                             //console.log("We found an item!!!", item);
                             //Title with link to incident, updated date, body//
                             document.getElementById("Statuspage-api").innerHTML += "<h3><a href='" + i.shortlink + "'>" + i.name + "</a></h3>" + "<i>Updated " + formatDate(i.updated_at) + "</i></br>" + i.incident_updates[0].body + "";
-                        }
-                        else if (item.name.indexOf("Login and Authentication") != -1 && item.status != "operational") {
+                        } else if (item.name.indexOf("Login and Authentication") != -1 && item.status != "operational") {
                             document.getElementById("Statuspage-api").innerHTML += "<h3><a href='" + i.shortlink + "'>" + i.name + "</a></h3>" + "<i>Updated " + formatDate(i.updated_at) + "</i></br>" + i.incident_updates[0].body + "";
 
-                                document.getElementById("alternatelink").setAttribute("role", "alert");
-                                document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is unavailable.<br><br><br>";
-                                document.getElementById("reggie-login").style.display = 'inline-block';
-                                $(document).ready(function () {
-                                    $(".login-link").hide();
-                                    // $(".reggie-login").css({visibility = 'visible'});
-                                    $(".alt-login").removeClass("visuallyhidden");
+                            document.getElementById("alternatelink").setAttribute("role", "alert");
+                            document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is unavailable.<br><br><br>";
+                            document.getElementById("reggie-login").style.display = 'inline-block';
+                            $(document).ready(function () {
+                                $(".login-link").hide();
+                                // $(".reggie-login").css({visibility = 'visible'});
+                                $(".alt-login").removeClass("visuallyhidden");
 
-                                })
-                                // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
+                            })
+                            // document.getElementsByClassName("reggie-login")[0].className += " alt-login";
 
                         }
                     })
@@ -79,7 +79,6 @@ function setupStatusPage() {
         success: printIncidentSummary
     });
 
- 
 
     //Other stuff that can be deleted. But keep for now//
     sp.summary({
@@ -94,11 +93,11 @@ function setupStatusPage() {
                         //document.getElementById("techalertrss").innerHTML = "<h1>Thar' be a problem</h1>";
                     }
 
- 
 
                 }
             })
         }
     });
 }
+
 //END StatusPage JS//
