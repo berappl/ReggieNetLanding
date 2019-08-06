@@ -14,66 +14,63 @@
     <script src="./WelcometoReggieNet_Files/saved_resource" type="text/javascript">// JQUERY //</script>
     <script type="text/javascript" src="./WelcometoReggieNet_files/customize.php"></script>
     <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
-    <!--Adding Statuspage Scripts from Kristen's code sample -->
-    <script type="text/javascript" src="signinapi.js"></script>
-    <script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
-<!--    <script LANGUAGE="JavaScript">-->
-<!--        function ISUAlerts() {-->
+    <script LANGUAGE="JavaScript">
+        function ISUAlerts() {
 
-<!--            //get feed to parse-->
-<!--            var url = "https://alerts.illinoisstate.edu/xml/";-->
+            //get feed to parse
+            var url = "https://alerts.illinoisstate.edu/xml/";
 
-<!--            feednami.load(url, function (result) {-->
-<!--                if (result.error) {-->
-<!--                    console.log(result.error)-->
-<!--                } else {-->
-<!--                    var entries = result.feed.entries;-->
-<!--                    var html = '';-->
-<!--                    var casdown = 0;-->
+            feednami.load(url, function (result) {
+                if (result.error) {
+                    console.log(result.error)
+                }
+                else {
+                    var entries = result.feed.entries;
+                    var html = '';
+                    var casdown = 0;
 
-<!--                    for (var i = 0; i < entries.length; i++) {-->
-<!--                        var entry = entries[i];-->
-<!--                        //console.dir(entry);-->
-<!--                        // To set this page to no longer recognize the "central login maintenance" tech alerts as outages comment out lines 35 and 36 and uncomment lines 37 and 38-->
-<!--                        //if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1){-->
-<!--                        // if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {-->
-<!--                        if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {-->
-<!--                            if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {-->
-<!--                                casdown = 1;-->
-<!--                            }-->
-<!--                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>");-->
-<!--                            // this line was breaking things in IntelliJ. Probably going to remove if it isn't used anymore.-->
-<!--                        //&lt;!&ndash; < br / > < font size = '-1' > " + entry.description + " < /font></li > &#45;&#45; >-->
-<!--                        }-->
-<!--                    }-->
-<!--                    //alert ("HTML to insert: " + html);-->
-<!--                    if (html.length < 1) {-->
-<!--                        html = ("<li>No alerts are active at this time</li>");-->
-<!--                        $(document).ready(function () {-->
-<!--                            // $(".reggie-login").hide();-->
-<!--                        })-->
-<!--                    } else if (casdown) {-->
-<!--                        document.getElementById("alternatelink").setAttribute("role", "alert");-->
-<!--                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is unavailable.<br><br><br>";-->
-<!--                        document.getElementById("reggie-login").style.display = 'inline-block';-->
-<!--                        $(document).ready(function () {-->
-<!--                            $(".login-link").hide();-->
-<!--                            // $(".reggie-login").css({visibility = 'visible'});-->
-<!--                            $(".alt-login").removeClass("visuallyhidden");-->
+                    for (var i = 0; i < entries.length; i++) {
+                        var entry = entries[i];
+                        //console.dir(entry);
+			// To set this page to no longer recognize the "central login maintenance" tech alerts as outages comment out lines 35 and 36 and uncomment lines 37 and 38
+			 //if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1){
+                              // if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {   
+                           if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1){
+                                 if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {
+				   casdown = 1;
+                            }
+                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
+							<!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
+                        }
+                    }
+                    //alert ("HTML to insert: " + html);
+                    if (html.length < 1) {
+                        html = ("<li>No alerts are active at this time</li>");
+						$(document).ready(function(){
+						// $(".reggie-login").hide();
+						})
+                    } else if (casdown) {
+						document.getElementById("alternatelink").setAttribute("role", "alert");
+                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienetdev.illinoisstate.edu/x/bygYHd' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
+						document.getElementById("reggie-login").style.display = 'inline-block';
+						$(document).ready(function(){
+    $(".login-link").hide();
+    // $(".reggie-login").css({visibility = 'visible'});
+    $(".alt-login").removeClass("visuallyhidden");
+      
+})
+									// document.getElementsByClassName("reggie-login")[0].className += " alt-login";
+                    }
 
-<!--                        })-->
-<!--                        // document.getElementsByClassName("reggie-login")[0].className += " alt-login";-->
-<!--                    }-->
-
-<!--                    document.getElementById("ReggieNetAlerts").innerHTML = html;-->
-<!--                }-->
-<!--            })-->
-<!--        }-->
-<!--    </script>-->
+						document.getElementById("ReggieNetAlerts").innerHTML = html;
+                }
+            })
+        }
+    </script>
     <script type="text/javascript" src="./WelcometoReggieNet_Files/jquery.min.js.download"></script>
     <script type="text/javascript" src="./WelcometoReggieNet_Files/iguide.js.download"></script>
 </head>
-<body onload="setupStatusPage();">
+<body onload="ISUAlerts();">
 <div id="iguide-filler"></div>
 <div id="iguide-float">
     <div class="iguide-link-container"><a class="iguide-isu"
@@ -128,10 +125,9 @@
                         <br/><label for="pw">Password</label><input name="pw" id="pw" type="password" />
                         <br/><input id="butt" type="image" value="submit" src="images/loginButton.gif" alt="Log in" />
                         </form-->
-                        <a class="login-link" href="/portal/login" title="Click here to log in" alt="CentralLogin"
-                           enctype="application/x-www-form-urlencoded" target="_parent"></a>
+						<a class="login-link" href="/portal/login" title="Click here to log in" alt="CentralLogin" enctype="application/x-www-form-urlencoded" target="_parent"></a>
                         <a id="reggie-login" href="https://reggienetdev.illinoisstate.edu/x/bygYHd"
-                           role="button" title="Click here to log in" alt="ReggieNet Login"
+						role="button" title="Click here to log in" alt="ReggieNet Login"
                            enctype="application/x-www-form-urlencoded" target="_parent">ReggieNet Login</a><br><br>
                     </div>
                 </div>
@@ -140,20 +136,16 @@
 
                 <!--block two start-->
                 <div class="module-box">
-                    <div class="module-top blue">
-                        <h2>ReggieNet Alerts</h2>
-                    </div>
-                    <div class="module-content">
-<!--                        commenting out the old Tech Alerts code-->
-<!--				        <span class="link-list">-->
-<!--				            <ul class="navlist">-->
-<!--                                <li id="ReggieNetAlerts"></li>-->
-<!--                            </ul>-->
-<!--                        </span>-->
-                        <span id="Statuspage-api">
-
-                        </span>
-                    </div>
+                <div class="module-top blue">
+                <h2>ReggieNet Alerts</h2>
+                </div>
+                <div class="module-content">
+				<span class="link-list">	
+				<ul class="navlist">
+                <li id="ReggieNetAlerts"></li>
+                </ul>
+                </span>
+                </div>
                 </div>
                 <!--block two end-->
 
@@ -167,8 +159,7 @@
                     management system, a feature-rich environment that provides tools for communication, assignment
                     submission, tests and quizzes, project collaboration, and much more. Login to ReggieNet today and
                     experience the potential of next generation collaborative learning environments.<br><br>To log in to
-                    the system, please click on the CentralLogin button and sign in using your ULID and ULID password.
-                </p>
+                    the system, please click on the CentralLogin button and sign in using your ULID and ULID password.</p>
 
                 </div>
                 <br><br>
@@ -194,8 +185,7 @@
             <!-- end include Bottom -->
         </div>
         <div class="sakaiCopyrightInfo" style="margin-top: 0"><img border="0" alt="Illinois State University"
-                                                                   src="./WelcometoReggieNet_Files/footerReggieGrey.png"
-                                                                   class="reggie-footer">
+                                                                   src="./WelcometoReggieNet_Files/footerReggieGrey.png" class="reggie-footer">
             <div id="isu_bold"><span class="normal">©</span> Illinois State University</div>
             <a href="http://illinoisstate.edu/diversity/" target="_blank">An equal opportunity/affirmative action
                 university encouraging diversity.</a> <br> <a
