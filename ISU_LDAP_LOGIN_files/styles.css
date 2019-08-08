@@ -1,9 +1,0 @@
-a[href] {
-    color:white;
-    background-color: transparent;
-    text-decoration: underline;
-}
-
-a[href]:hover {
-    color: white;
-}
