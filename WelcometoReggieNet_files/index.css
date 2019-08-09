@@ -1113,20 +1113,20 @@ button {background:none; border: none;}
 /*System Alerts*/
 p.noalerts {text-align: center !important; font-family: 'ISUItalic'; font-weight: lighter;}
 
-.statusBarRed {border-radius: .25em; border: solid .25em #660000; color: #660000; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; display: block; font-weight: bold; margin-top: 20px; margin-bottom: 20px; background-color: #f1b9b9;  }
+.statusBarRed {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #660000; color: #660000; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #f1b9b9;  }
 .statusBarRed a {color: #660000;}
-.statusBarBlue {border-radius: .25em; border: solid .25em #324453; color: #324453; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; display: block; font-weight: bold; margin-top: 20px; margin-bottom: 20px; background-color: #e6e6e6;}
+.statusBarBlue {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #324453; color: #324453; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #e6e6e6;}
 .statusBarBlue a {color: #324453;}
-.statusBarGreen {border-radius: .25em; border: solid .25em #294a2a;  color: #294a2a; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; display: block; font-weight: bold; margin-top: 20px; margin-bottom: 20px; background-color: #d2e6d3;}
+.statusBarGreen {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #294a2a;  color: #294a2a; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #d2e6d3;}
 .statusBarRed a:hover, .statusBarBlue a:hover, .statusBarGreen a:hover {text-decoration: none;}
 .operational::before {content: "\e204"; color: #294a2a; float: right; position: relative; border:}
-.degraded_performance::before {content: "\e016"; color: #660000; float: right; position: relative;}
-.partial_outage::before {content: "\e206"; color: #660000; float: right; position: relative;}
-.major_outage::before {content: "\e208"; color: #660000; float: right; position: relative;}
-.maintenance::before {content: "\e022"; color: #324453; float: right; position: relative;}
-.date {font-size: .9em; color: #324453; font-family:'ISUItalic'; font-weight: lighter;}
+.degraded_performance::before {content: "\e016"; color: #660000; float: right; position: relative; display: inline-block;}
+.partial_outage::before {content: "\e206"; color: #660000; float: right; position: relative; display: inline-block;}
+.major_outage::before {content: "\e208"; color: #660000; float: right; position: relative; display: inline-block;}
+.maintenance::before {content: "\e022"; color: #324453; float: right; position: relative; display: inline-block;}
+.date {font-size: .9em; color: #324453; font-family:'ISUItalic'; font-weight: lighter; display: inline-block;}
 
-.u-link--chevron {font-family: 'ISUCondBold';}
+.u-link--chevron {font-family: 'ISUCondBold'; display: block;}
 .u-link--chevron::after {
     content: "\e005";
     display: inline-block;
@@ -1296,7 +1296,7 @@ line-height: 1.2em;/* FF only */
   margin: 2.5rem auto 1rem auto;
   padding: .625rem 1.25rem;
   width: 800px;
-  max-wdith: 100%;
+  max-width: 80%;
 }
 
 /* Cosmetic styles specific to the 'Danger' alert type */

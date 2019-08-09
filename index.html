@@ -5,7 +5,7 @@
 <meta charset="utf-8">
 <title id="title"></title>
 <link rel="stylesheet" type="text/css" href="WelcometoReggieNet_Files/index.css" />
-<link rel="shortcut icon" href="WelcometoReggieNet_Files/images/ISU/ISUreggie.ico" type="image/x-icon" />
+<link rel="shortcut icon" href="WelcometoReggieNet_Files/images/ISU/reggie.ico" type="image/x-icon" />
 <script type="text/javascript" src="WelcometoReggieNet_Files/index.js"></script>
 <link rel="stylesheet" type="text/css" media="screen,print" href="https://iguides.illinoisstate.edu/css/style.css" />
 <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
@@ -47,7 +47,7 @@
     			<p class="c-ui-message__text">CentralLogin is unavailable or undergoing maintenance. This is an alternative way to sign in to ReggieNet.</p>
   			</div>
 		</div>
-			<form action="https://reggienet.illinoisstate.edu/portal/xlogin" class="form_box" method="post">
+			<form action="/" class="form_box" method="post" id="ldapsubmit">
 				<p><label for="eid">Username</label> <input id="eid" name="eid" size="20" type="text" value="" />
 				<label for="pw">Password</label> <input id="pw" name="pw" onfocus="this.passwordfocus = true; " size="20" type="password" value="" /></p>
 				<p><input class="button" id="submit" name="submit" type="submit" value="Sign in" /></p>
@@ -77,7 +77,7 @@
     <div class="o-footer__divider"><!--divider--></div>
     <div class="o-footer__logo c-university-logo" > <a class="c-university-logo__link" href="https://illinoisstate.edu/">
       <div class="c-university-logo__seal"> 
-        <img class="c-university-logo__image" src="WelcometoReggieNet_files/images/ISU/illinoisstate-seal.svg" alt="" /> </div>
+        <img class="c-university-logo__image" src="WelcometoReggieNet_Files/images/ISU/illinoisstate-seal.svg" alt="" /> </div>
       <div class="c-university-logo__text">
         <div class="c-university-logo__logotype">Illinois State</div>
         <div class="c-university-logo__logotype">university</div>

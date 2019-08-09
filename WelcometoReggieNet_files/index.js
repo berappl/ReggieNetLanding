@@ -99,26 +99,31 @@ window.addEventListener('load', function () {
 	var head = document.getElementById('head');
 	var subhead = document.getElementById('subhead');
 	var introtext = document.getElementById('introtext');
+	var ldapsubmit = document.getElementById('ldapsubmit');
 	if (window.location.toString().indexOf('reggienetdev') >= 0) {
 		title.textContent = "ReggieNet - Dev";
 		head.textContent = "ReggieNet - Dev";
 		subhead.textContent = "ReggieNet - Dev";
 		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
+		ldapsubmit.action = "https://reggienetdev.illinoisstate.edu/portal/xlogin";
 	} else if (window.location.toString().indexOf('reggienettest') >= 0) {
 		title.textContent = "ReggieNet - Test";
 		head.textContent = "ReggieNet - Test";
 		subhead.textContent = "ReggieNet - Test";
 		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
+		ldapsubmit.action = "https://reggienettest.illinoisstate.edu/portal/xlogin";
 	} else if (window.location.toString().indexOf('reggienet') >= 0) {
 		title.textContent = "ReggieNet";
 		head.textContent = "ReggieNet";
 		subhead.textContent = "ReggieNet";
 		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
+		ldapsubmit.action = "https://reggienet.illinoisstate.edu/portal/xlogin";
 	} else {
 		title.textContent = "Unknown Environment";
 		head.textContent = "Unknown Environment";
 		subhead.textContent = "Unknown Environment";
 		introtext.textContent = "Unknown Environment";
+		ldapsubmit.action = "/";
 	}
 
 });
