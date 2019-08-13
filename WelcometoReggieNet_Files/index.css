@@ -629,6 +629,7 @@ label {
 }
 input, textarea, select {
 	padding: .77em;
+	border: 1px solid #787878;
 }
 input:focus, textarea:focus, select:focus {
 	outline: 1px dotted #212121;
@@ -1105,7 +1106,8 @@ button {background:none; border: none;}
 	font-size: 1.1em;
 }
 }
-/*Intro text*/
+/*Intro text and header*/
+.reggienet {background-color: #c00; border-radius: .25em; border: 10px solid #c00;}
 .u-text--intro {
 	font-family: 'ISULight';
 	font-size: 1.25em;

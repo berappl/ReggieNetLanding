@@ -95,52 +95,26 @@ function setupStatusPage() {
 //END StatusPage JS//
 //Choose which to pull environment//
 window.addEventListener('load', function () {
+	setupStatusPage();
 	var title = document.getElementById('title');
-	var head = document.getElementById('head');
 	var subhead = document.getElementById('subhead');
 	var introtext = document.getElementById('introtext');
 	var ldapsubmit = document.getElementById('ldapsubmit');
-	if (window.location.toString().indexOf('reggienetdev') >= 0) {
+	var hostname = window.location.href //should be window.location.hostname when live //
+	var loginLink = document.getElementById('login-link')
+	if (hostname.indexOf('reggienetdev') >= 0) {
 		title.textContent = "ReggieNet - Dev";
-		head.textContent = "ReggieNet - Dev";
 		subhead.textContent = "ReggieNet - Dev";
-		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
 		ldapsubmit.action = "https://reggienetdev.illinoisstate.edu/portal/xlogin";
-	} else if (window.location.toString().indexOf('reggienettest') >= 0) {
+		loginLink.href = "https://reggienetdev.illinoisstate.edu/portal/login";
+	} else if (hostname.indexOf('reggienettest') >= 0) {
 		title.textContent = "ReggieNet - Test";
-		head.textContent = "ReggieNet - Test";
 		subhead.textContent = "ReggieNet - Test";
-		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
 		ldapsubmit.action = "https://reggienettest.illinoisstate.edu/portal/xlogin";
-	} else if (window.location.toString().indexOf('reggienet') >= 0) {
-		title.textContent = "ReggieNet";
-		head.textContent = "ReggieNet";
-		subhead.textContent = "ReggieNet";
-		introtext.textContent = "The learning management system for Illinois State University's students, faculty, and staff.";
-		ldapsubmit.action = "https://reggienet.illinoisstate.edu/portal/xlogin";
-	} else {
-		title.textContent = "Unknown Environment";
-		head.textContent = "Unknown Environment";
-		subhead.textContent = "Unknown Environment";
-		introtext.textContent = "Unknown Environment";
-		ldapsubmit.action = "/";
-	}
+		loginLink.href = "https://reggienettest.illinoisstate.edu/portal/login";
+	} 
 
 });
-
-//Switch CentralLogin URL//
-
-function SwitchURL() {
-	if (window.location.toString().indexOf('reggienetdev') >= 0) {
-		window.location = "https://reggienetdev.illinoisstate.edu/portal/login";
-	} else if (window.location.toString().indexOf('reggienettest') >= 0) {
-		window.location = "https://reggienettest.illinoisstate.edu/portal/login";
-	} else if (window.location.toString().indexOf('reggienet') >= 0) {
-		window.location = "https://reggienet.illinoisstate.edu/portal/login";
-	} else {
-		window.location = "";
-	}
-}
 
 //on click of copyright button, show internal log in//
 function showLDAPlogin() {
