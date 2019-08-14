@@ -31,7 +31,8 @@ function setupStatusPage() {
 		if (result.components != null) {
 			result.components.forEach(function (c) {
 				if (c.name == switchSystem) { 
-					if (c.status == 'operational') { document.getElementById("statusPageComponent").innerHTML += ('<span class="statusBarGreen">All systems operational<span class="visuallyhidden">Operational</span><span class="operational"></span></span>'); }	
+					if (c.status == 'operational') { document.getElementById("statusPageComponent").innerHTML 
+					+= ('<span class="statusBarGreen">All systems operational<span class="visuallyhidden">Operational</span><span class="operational"></span></span>'); }	
 				}
 			});	
 		}
@@ -41,13 +42,19 @@ function setupStatusPage() {
 				if (i.status != "resolved") {
 					i.components.forEach(function (item) {
 						if (item.name.indexOf(switchSystem) != -1 && item.status == "degraded_performance") { 
-							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' + "<a href='" + i.shortlink + "' target='blank'>" + i.name + '</a><span class="visuallyhidden">Degraded Performance</span><span class="degraded_performance"></span></span>'; 
+							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' 
+							+ "<a href='" + i.shortlink + "' target='blank'>" + i.name 
+							+ '</a><span class="visuallyhidden">Degraded Performance</span><span class="degraded_performance"></span></span>'; 
 						}
 						if (item.name.indexOf(switchSystem) != -1 && item.status == "partial_outage") { 
-							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' + "<a href='" + i.shortlink + "' target='blank'>" + i.name + '</a><span class="visuallyhidden">Partial Outage</span><span class="partial_outage"></span></span>'; 
+							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' 
+							+ "<a href='" + i.shortlink + "' target='blank'>" + i.name 
+							+ '</a><span class="visuallyhidden">Partial Outage</span><span class="partial_outage"></span></span>'; 
 						}
 						if (item.name.indexOf(switchSystem) != -1 && item.status == "major_outage") { 
-							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' + "<a href='" + i.shortlink + "' target='blank'>" + i.name + '</a><span class="visuallyhidden">Major Outage</span><span class="major_outage"></span></span>'; 
+							document.getElementById("statusPageIncidents").innerHTML += '<span class="statusBarRed" role="alert">' 
+							+ "<a href='" + i.shortlink + "' target='blank'>" + i.name 
+							+ '</a><span class="visuallyhidden">Major Outage</span><span class="major_outage"></span></span>'; 
 						}
 						//Show LDAP login and hide CentralLogin if incident status is not resolved AND Central Login is in the title AND the item status is not operational//
 						if (i.name.toUpperCase().includes("CENTRAL LOGIN") && item.status != "operational") {
@@ -64,7 +71,10 @@ function setupStatusPage() {
 					sm.components.forEach(function (item) {
 						if (item.name.indexOf(switchSystem) != -1) {
 							//console.log("We found an item!!!", item);
-							document.getElementById("statusPageMaintenance").innerHTML += ('<span class="statusBarBlue">' + "<a href='" + sm.shortlink + "' target='blank'>" + sm.name + '</a> <span class="date">Scheduled ' + formatDate(sm.scheduled_for) + ' - ' + formatDate(sm.scheduled_until) + '</span><span class="visuallyhidden">Maintenance</span><span class="maintenance"></span></span>');
+							document.getElementById("statusPageMaintenance").innerHTML += ('<span class="statusBarBlue">' 
+							+ "<a href='" + sm.shortlink + "' target='blank'>" + sm.name + '</a> <span class="date">Scheduled ' 
+							+ formatDate(sm.scheduled_for) + ' - ' + formatDate(sm.scheduled_until) 
+							+ '</span><span class="visuallyhidden">Maintenance</span><span class="maintenance"></span></span>');
 						}
 					})
 				}
@@ -98,7 +108,6 @@ window.addEventListener('load', function () {
 	setupStatusPage();
 	var title = document.getElementById('title');
 	var subhead = document.getElementById('subhead');
-	var introtext = document.getElementById('introtext');
 	var ldapsubmit = document.getElementById('ldapsubmit');
 	var hostname = window.location.href //should be window.location.hostname when live //
 	var loginLink = document.getElementById('login-link')
