@@ -109,7 +109,8 @@ window.addEventListener('load', function () {
 	var title = document.getElementById('title');
 	var subhead = document.getElementById('subhead');
 	var ldapsubmit = document.getElementById('ldapsubmit');
-	var hostname = window.location.href //should be window.location.hostname when live //
+	//var hostname = window.location.href //for testing//
+	var hostname = window.location.hostname //for prod//
 	var loginLink = document.getElementById('login-link')
 	if (hostname.indexOf('reggienetdev') >= 0) {
 		title.textContent = "ReggieNet - Dev";
