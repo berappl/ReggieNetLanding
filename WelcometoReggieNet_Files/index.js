@@ -32,7 +32,7 @@ function setupStatusPage() {
 			result.components.forEach(function (c) {
 				if (c.name == switchSystem) { 
 					if (c.status == 'operational') { document.getElementById("statusPageComponent").innerHTML 
-					+= ('<span class="statusBarGreen">All systems operational<span class="visuallyhidden">Operational</span><span class="operational"></span></span>'); }	
+					+= ('<span class="statusBarGreen">' + c.name + ' is operational<span class="visuallyhidden">Operational</span><span class="operational"></span></span>'); }	
 				}
 			});	
 		}
@@ -101,8 +101,8 @@ function setupStatusPage() {
 		success: printIncidentSummary
 	});
 }
-
 //END StatusPage JS//
+
 //Choose which to pull environment//
 window.addEventListener('load', function () {
 	setupStatusPage();
@@ -113,13 +113,11 @@ window.addEventListener('load', function () {
 	var hostname = window.location.hostname //for prod//
 	var loginLink = document.getElementById('login-link')
 	if (hostname.indexOf('reggienetdev') >= 0) {
-		title.textContent = "ReggieNet - Dev";
-		subhead.textContent = "ReggieNet - Dev";
+		title.textContent, subhead.textContent = "ReggieNet - Dev";
 		ldapsubmit.action = "https://reggienetdev.illinoisstate.edu/portal/xlogin";
 		loginLink.href = "https://reggienetdev.illinoisstate.edu/portal/login";
 	} else if (hostname.indexOf('reggienettest') >= 0) {
-		title.textContent = "ReggieNet - Test";
-		subhead.textContent = "ReggieNet - Test";
+		title.textContent, subhead.textContent = "ReggieNet - Test";
 		ldapsubmit.action = "https://reggienettest.illinoisstate.edu/portal/xlogin";
 		loginLink.href = "https://reggienettest.illinoisstate.edu/portal/login";
 	} 
@@ -130,5 +128,3 @@ window.addEventListener('load', function () {
 function showLDAPlogin() {
 	document.getElementById("ldap-login").style.display = "block";
 }
-
-//https://reggienet.illinoisstate.edu/access/content/public/LDAP_login_page.html
