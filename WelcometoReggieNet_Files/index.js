@@ -66,6 +66,9 @@ function setupStatusPage() {
 		}
 		//Check scheduled maintenance where the scheduled maintenance status IS NOT completed AND the name of the component is 'System name'//
 		if (result.scheduled_maintenances != null) {
+			result.scheduled_maintenances.sort(function (a, b) {
+				return new Date(a.scheduled_for) - new Date(b.scheduled_for)
+			})
 			result.scheduled_maintenances.forEach(function (sm) {
 				if (sm.status != "completed") {
 					sm.components.forEach(function (item) {
