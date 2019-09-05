@@ -860,11 +860,11 @@ table th {
 /*
 * helper classes that are not tied to specific elements
 */
-/*------------------- #background styling utilities
+/*------------------ #background styling utilities
 -------------------*/
 
 .u-white {
-	background-color: white; margin: 3em auto;
+	background-color: white; margin: 3em auto 0em auto;
 }
 .u-red-btm-border {
 	border-bottom: 5px solid #CC0000;
