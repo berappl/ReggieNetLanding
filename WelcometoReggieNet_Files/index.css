@@ -864,7 +864,7 @@ table th {
 -------------------*/
 
 .u-white {
-	background-color: white;
+	background-color: white; margin: 3em auto;
 }
 .u-red-btm-border {
 	border-bottom: 5px solid #CC0000;
@@ -1141,6 +1141,15 @@ p.noalerts {text-align: center !important; font-family: 'ISUItalic'; font-weight
     transition: all .3s ease 0s;
 }
 
+/* Resources */
+.c-centered {text-align: center;}
+.u-v-margin-20 {margin-top: 1.25rem; margin-bottom: 1.25rem;}
+.c-inline-list {margin: 0; padding: 0; list-style-type: none;}
+@media only screen and (min-width: 600px) {.c-inline-list__list-item { display: inline; }}
+@media only screen and (min-width: 600px) {.c-inline-list--divider .c-inline-list__list-item::after {content: '\2022'; padding: .5rem;}}
+@media only screen and (min-width: 600px) {.c-inline-list--divider .c-inline-list__list-item:last-of-type::after {content: '';}}
+@media only screen and (max-width: 599px) {.o-row .u-white {margin: 0em auto;}}
+
 .o-row::before {
 	content: '';
 	display: table;
@@ -1151,7 +1160,7 @@ p.noalerts {text-align: center !important; font-family: 'ISUItalic'; font-weight
 	clear: both;
 }
 .u-row-v-margin {
-	margin: 3em 0em 1em 0em;
+	margin: 2em 0em 2em 0em;
 }
 .u-black-stripe--bg {
 	background: #000 url(images/ISU/diagonal-grey.jpg) repeat 0 0;
