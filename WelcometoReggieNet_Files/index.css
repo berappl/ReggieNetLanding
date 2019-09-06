@@ -1,0 +1,1337 @@
+/* ========================================================================== NORMALIZE FILE USED IN HTML5 BOILERPLATE (the base html/css template for our websites) --Do not change this file ========================================================================== */
+/*! normalize.css v2.1.0 | MIT License | git.io/normalize */
+/* ========================================================================== HTML5 display definitions ========================================================================== */
+/** Correct `block` display not defined in IE 8/9. */
+article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section, summary {
+	display: block;
+}
+/** Correct `inline-block` display not defined in IE 8/9. */
+audio, canvas, video {
+	display: inline-block;
+}
+/** Prevent modern browsers from displaying `audio` without controls. Remove excess height in iOS 5 devices. */
+audio:not([controls]) {
+	display: none;
+	height: 0;
+}
+/** Address styling not present in IE 8/9. */
+[hidden] {
+	display: none;
+}
+/* ========================================================================== Base ========================================================================== */
+/** 1. Set default font family to sans-serif. 2. Prevent iOS text size adjust after orientation change, without disabling user zoom. */
+html {
+	font-family: sans-serif; /* 1 */
+	-webkit-text-size-adjust: 100%; /* 2 */
+	-ms-text-size-adjust: 100%; /* 2 */
+	font-size: 100%;
+	line-height: 1.5;
+}
+/** Remove default margin. */
+body {
+	margin: 0;
+}
+/* ========================================================================== Links ========================================================================== */
+/** Address `outline` inconsistency between Chrome and other browsers. */
+a:focus {
+	outline: thin dotted;
+}
+/** Improve readability when focused and also mouse hovered in all browsers. */
+a:active, a:hover {
+	outline: 0;
+}
+/* ========================================================================== Typography ========================================================================== */
+/** Address variable `h1` font-size and margin within `section` and `article` contexts in Firefox 4+, Safari 5, and Chrome. */
+h1 {
+	font-size: 2em;
+	margin: 0.67em 0;
+}
+/** Address styling not present in IE 8/9, Safari 5, and Chrome. */
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+/** Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome. */
+b, strong {
+	font-weight: bold;
+}
+/** Address styling not present in Safari 5 and Chrome. */
+dfn {
+	font-style: italic;
+}
+/** Address differences between Firefox and other browsers. */
+hr {
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	height: 0;
+}
+/** Address styling not present in IE 8/9. */
+mark {
+	background: #ff0;
+	color: #000;
+}
+/** Correct font family set oddly in Safari 5 and Chrome. */
+code, kbd, pre, samp {
+	font-family: monospace, serif;
+	font-size: 1em;
+}
+/** Improve readability of pre-formatted text in all browsers. */
+pre {
+	white-space: pre-wrap;
+}
+/** Set consistent quote types. */
+q {
+	quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/** Address inconsistent and variable font size in all browsers. */
+small {
+	font-size: 80%;
+}
+/** Prevent `sub` and `sup` affecting `line-height` in all browsers. */
+sub, sup {
+	font-size: 75%;
+	line-height: 0;
+	position: relative;
+	vertical-align: baseline;
+}
+sup {
+	top: -0.5em;
+}
+sub {
+	bottom: -0.25em;
+}
+/* ========================================================================== Embedded content ========================================================================== */
+/** Remove border when inside `a` element in IE 8/9. */
+img {
+	border: 0;
+}
+/** Correct overflow displayed oddly in IE 9. */
+svg:not(:root) {
+	overflow: hidden;
+}
+/* ========================================================================== Figures ========================================================================== */
+/** Address margin not present in IE 8/9 and Safari 5. */
+figure {
+	margin: 0;
+}
+/* ========================================================================== Forms ========================================================================== */
+/** Define consistent border, margin, and padding. */
+form {
+	margin: 0;
+}
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/** 1. Correct `color` not being inherited in IE 8/9. 2. Remove padding so people aren't caught out if they zero out fieldsets. */
+legend {
+	border: 0; /* 1 */
+	padding: 0; /* 2 */
+*margin-left: -.54em;
+}
+/** 1. Correct font family not being inherited in all browsers. 2. Correct font size not being inherited in all browsers. 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome. */
+button, input, select, textarea {
+	font-family: inherit; /* 1 */
+	font-size: 100%; /* 2 */
+	vertical-align: baseline;
+*vertical-align: middle;
+}
+/** Address Firefox 4+ setting `line-height` on `input` using `!important` in the UA stylesheet. */
+button, input {
+	line-height: normal;
+*overflow: visible;
+}
+/** Address inconsistent `text-transform` inheritance for `button` and `select`. All other form control elements do not inherit `text-transform` values. Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+. Correct `select` style inheritance in Firefox 4+ and Opera. */
+button, select {
+	text-transform: none;
+}
+/** 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio` and `video` controls. 2. Correct inability to style clickable `input` types in iOS. 3. Improve usability and consistency of cursor style between image-type `input` and others. */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+	-webkit-appearance: button; /* 2 */
+	cursor: pointer; /* 3 */
+	width: auto;
+}
+/** Re-set default cursor for disabled elements. */
+button[disabled], html input[disabled] {
+	cursor: default;
+}
+/** 1. Address box sizing set to `content-box` in IE 8/9. 2. Remove excess padding in IE 8/9. */
+input[type="checkbox"], input[type="radio"] {
+	box-sizing: border-box; /* 1 */
+	padding: 0; /* 2 */
+}
+/** 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome. 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome (include `-moz` to future-proof). */
+input[type="search"] {
+	-webkit-appearance: textfield; /* 1 */
+	-moz-box-sizing: content-box;
+	-webkit-box-sizing: content-box; /* 2 */
+	box-sizing: content-box;
+}
+
+/** Remove inner padding and search cancel button in Safari 5 and Chrome on OS X. */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+-webkit-appearance: none;
+}
+
+/** Remove inner padding and border in Firefox 4+. */
+button::-moz-focus-inner, input::-moz-focus-inner {
+border: 0;
+padding: 0;
+}
+/** 1. Remove default vertical scrollbar in IE 8/9. 2. Improve readability and alignment in all browsers. */
+textarea {
+	overflow: auto; /* 1 */
+	vertical-align: top; /* 2 */
+}
+/* ========================================================================== Tables ========================================================================== */
+/** Remove most spacing between table cells. */
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/* HTML5 Boilerplate  What follows is the result of much research on cross-browser styling. Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal, Kroc Camen, and the H5BP dev community and team. */
+/* ========================================================================== Base styles: opinionated defaults ========================================================================== */
+html, button, input, select, textarea {
+	color: #222;
+}
+body {
+	font-size: 1em;
+	line-height: 1.4;
+}
+a {
+	color: #00e;
+}
+a:visited {
+	color: #551a8b;
+}
+a:hover {
+	color: #06e;
+}
+/* Remove the gap between images and the bottom of their containers: h5bp.com/i/440 */
+img {
+	vertical-align: middle;
+}
+/* Remove default fieldset styles. */
+fieldset {
+	border: 0;
+	margin: 0;
+	padding: 0;
+}
+/* Allow only vertical resizing of textareas. */
+textarea {
+	resize: vertical;
+}
+/* ========================================================================== Helper classes ========================================================================== */
+/* Prevent callout */
+.nocallout {
+	-webkit-touch-callout: none;
+}
+.pressed {
+	background-color: rgba(0, 0, 0, 0.7);
+}
+/* A hack for HTML5 contenteditable attribute on mobile */
+textarea[contenteditable] {
+	-webkit-appearance: none;
+}
+/* A workaround for S60 3.x and 5.0 devices which do not animated gif images if they have been set as display: none */
+.gifhidden {
+	position: absolute;
+	left: -100%;
+}
+/* Image replacement */
+.ir {
+	background-color: transparent;
+	background-repeat: no-repeat;
+	border: 0;
+	direction: ltr;
+	display: block;
+	overflow: hidden;
+	text-align: left;
+	text-indent: -999em;
+}
+.ir br {
+	display: none;
+}
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+/* Hide only visually, but have it available for screenreaders: h5bp.com/v */
+.visuallyhidden {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+}
+/* Extends the .visuallyhidden class to allow the element to be focusable when navigated to via the keyboard: h5bp.com/p */
+.visuallyhidden.focusable:active, .visuallyhidden.focusable:focus {
+	clip: auto;
+	height: auto;
+	margin: 0;
+	overflow: visible;
+	position: static;
+	width: auto;
+}
+a.visuallyhidden:focus, button.visuallyhidden:focus {
+	-webkit-border-radius: 0 0 0.77em 0.77em;
+	-moz-border-radius: 0 0 0.77em 0.77em;
+	-ms-border-radius: 0 0 0.77em 0.77em;
+	-o-border-radius: 0 0 0.77em 0.77em;
+	border-radius: 0 0 0.77em 0.77em;
+	-webkit-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+	-moz-box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+	box-shadow: -2px 2px 5px rgba(0, 0, 0, 0.4);
+	clip: auto;
+	height: auto;
+	position: fixed;
+	margin: 0;
+	overflow: hidden;
+	padding: 16px;
+	width: auto;
+	top: 0;
+	left: 10px;
+	background: gold;
+	color: #333;
+	font-family: 'ISUCondBold';
+	font-size: 1.2em;
+	z-index: 2000000001;
+}
+/* Hide visually and from screenreaders, but maintain layout */
+.invisible {
+	visibility: hidden;
+}
+/** Clearfix helper Used to contain floats: h5bp.com/q */
+.clearfix:before, .clearfix:after {
+	content: "";
+	display: table;
+}
+.clearfix:after {
+	clear: both;
+}
+/*------------------- #Text Fonts - Sans-Serif
+-------------------*/
+/*
+* ISU web fonts have been chosen based on the print styleguide provided by UMC
+* The font-face include is based off of Compass' mixins, will need to updated when we switch to PostCSS
+* [1] This is for the University logo subscript (located in the footer of the template). The Latin Modern font is pulled in through the iGuide.
+*
+*/
+/*------------------- #Defaults
+-------------------*/
+@font-face {
+	font-family: "ISURegular";
+	src: url(fonts/ISU/open-sans/regular.eot);
+	src: url(fonts/ISU/open-sans/regular.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/regular.woff) format('woff'), url(fonts/ISU/open-sans/regular.ttf) format('truetype'), url(fonts/ISU/open-sans/regular.svg#OpenSansRegular) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUBold";
+	src: url(fonts/ISU/open-sans/bold.eot);
+	src: url(fonts/ISU/open-sans/bold.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/bold.woff) format('woff'), url(fonts/ISU/open-sans/bold.ttf) format('truetype'), url(fonts/ISU/open-sans/bold.svg#OpenSansBold) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUItalic";
+	src: url(fonts/ISU/open-sans/italic.eot);
+	src: url(fonts/ISU/open-sans/italic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/italic.woff) format('woff'), url(fonts/ISU/open-sans/italic.ttf) format('truetype'), url(fonts/ISU/open-sans/italic.svg#OpenSansItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUBoldItalic";
+	src: url(fonts/ISU/open-sans/bolditalic.eot);
+	src: url(fonts/ISU/open-sans/bolditalic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/bolditalic.woff) format('woff'), url(fonts/ISU/open-sans/bolditalic.ttf) format('truetype'), url(fonts/ISU/open-sans/bolditalic.svg#OpenSansBoldItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUCondBold";
+	src: url(fonts/ISU/open-sans/condbold.eot);
+	src: url(fonts/ISU/open-sans/condbold.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/condbold.woff) format('woff'), url(fonts/ISU/open-sans/condbold.ttf) format('truetype'), url(fonts/ISU/open-sans/condbold.svg#OpenSansCondBold) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISULight";
+	src: url(fonts/ISU/open-sans/light.eot);
+	src: url(fonts/ISU/open-sans/light.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/light.woff) format('woff'), url(fonts/ISU/open-sans/light.ttf) format('truetype'), url(fonts/ISU/open-sans/light.svg#OpenSansLight) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISULightItalic";
+	src: url(fonts/ISU/open-sans/lightitalic.eot);
+	src: url(fonts/ISU/open-sans/lightitalic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/lightitalic.woff) format('woff'), url(fonts/ISU/open-sans/lightitalic.ttf) format('truetype'), url(fonts/ISU/open-sans/lightitalic.svg#OpenSansLightItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*------------------- #Extras -- split into different partial?
+-------------------*/
+@font-face {
+	font-family: "ISUSemibold";
+	src: url(fonts/ISU/open-sans/semibold.eot);
+	src: url(fonts/ISU/open-sans/semibold.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/semibold.woff) format('woff'), url(fonts/ISU/open-sans/semibold.ttf) format('truetype'), url(fonts/ISU/open-sans/semibold.svg#OpenSansSemibold) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUSemiboldItalic";
+	src: url(fonts/ISU/open-sans/semibolditalic.eot);
+	src: url(fonts/ISU/open-sans/semibolditalic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/semibolditalic.woff) format('woff'), url(fonts/ISU/open-sans/semibolditalic.ttf) format('truetype'), url(fonts/ISU/open-sans/semibolditalic.svg#OpenSansSemiboldItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUCondLight";
+	src: url(fonts/ISU/open-sans/condlight.eot);
+	src: url(fonts/ISU/open-sans/condlight.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/condlight.woff) format('woff'), url(fonts/ISU/open-sans/condlight.ttf) format('truetype'), url(fonts/ISU/open-sans/condlight.svg#OpenSansCondLight) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUCondLightItalic";
+	src: url(fonts/ISU/open-sans/condlightitalic.eot);
+	src: url(fonts/ISU/open-sans/condlightitalic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/condlightitalic.woff) format('woff'), url(fonts/ISU/open-sans/condlightitalic.ttf) format('truetype'), url(fonts/ISU/open-sans/condlightitalic.svg#OpenSansCondLightItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUExtraBold";
+	src: url(fonts/ISU/open-sans/extrabold.eot);
+	src: url(fonts/ISU/open-sans/extrabold.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/extrabold.woff) format('woff'), url(fonts/ISU/open-sans/extrabold.ttf) format('truetype'), url(fonts/ISU/open-sans/extrabold.svg#OpenSansExtraBold) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUExtraBoldItalic";
+	src: url(fonts/ISU/open-sans/extrabolditalic.eot);
+	src: url(fonts/ISU/open-sans/extrabolditalic.eot?#iefix) format('eot'), url(fonts/ISU/open-sans/extrabolditalic.woff) format('woff'), url(fonts/ISU/open-sans/extrabolditalic.ttf) format('truetype'), url(fonts/ISU/open-sans/extrabolditalic.svg#OpenSansExtraBoldItalic) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*------------------- #University Logo [1]
+-------------------*/
+@font-face {
+	font-family: "ISULogoSerif";
+	src: url(fonts/ISU/latin-modern/sc-regular.eot);
+	src: url(fonts/ISU/latin-modern/sc-regular.eot?#iefix) format('eot'), url(fonts/ISU/latin-modern/sc-regular.woff) format('woff'), url(fonts/ISU/latin-modern/sc-regular.ttf) format('truetype'), url(fonts/ISU/latin-modern/sc-regular.svg#LatinModern) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+@font-face {
+	font-family: "ISUSerifItalic";
+	src: url(fonts/ISU/pt-serif/italic.eot);
+	src: url(fonts/ISU/pt-serif/italic.eot?#iefix) format('eot'), url(fonts/ISU/pt-serif/italic.woff) format('woff'), url(fonts/ISU/pt-serif/italic.ttf) format('truetype'), url(fonts/ISU/pt-serif/italic.svg#PTSerif) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/* ---------------------------------- #Icon Font Face
+---------------------------------- */
+@font-face {
+	font-family: "isu-icons-new";
+	src: url(fonts/ISU/icons/isu-icons-new.eot);
+	src: url(fonts/ISU/icons/isu-icons-new.eot?#iefix) format('eot'), url(fonts/ISU/icons/isu-icons-new.woff) format('woff'), url(fonts/ISU/icons/isu-icons-new.ttf) format('truetype'), url(fonts/ISU/icons/isu-icons-new.svg#icomoon) format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+/*--Automatic styling needed for using the icon font in a before or after--*/
+:before, :after {
+	font-family: "isu-icons-new";
+	font-style: normal;
+	speak: none;
+	font-weight: normal;
+	-webkit-font-smoothing: antialiased;
+}
+/*------------- Elements
+-------------*/
+/*----------------- Elements partials
+-----------------*/
+/*
+* These come after Generic in the stack, before Objects
+* This section styles html elements (no classes)
+*/
+/*------------------- #base page styling
+-------------------*/
+/*------------ all elements
+-------------*/
+
+/*------------ base elements
+-------------*/
+/*
+* [1] 16px on 24px leading is browser standard
+* [2] for iOS momentum scrolling on devices
+* [3] for iOS momentum scrolling on devices
+* [4] removes default gray highlight and uses :active styling -- needs javascript component to work
+* [5] fix for Safari so it doesn't scale text improperly on devices
+* [6] so images scale in responsive
+*/
+html {
+	background-image: url(images/ISU/isu-seal-grey-slice.svg);
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 150%;
+	color: black;
+	font: normal normal 100%/1.5 "ISURegular", Helvetica, Arial, sans-serif; /*[1]*/
+	height: 100%;
+	overflow-y: scroll; /*[2]*/
+	-webkit-overflow-scrolling: touch; /*[3]*/
+	-webkit-tap-highlight-color: rgba(0, 0, 0, 0); /*[4]*/
+	-webkit-text-size-adjust: 100%; /*[5]*/
+}
+body {
+	line-height: 1.5;
+}
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+/*------------ media queries
+-------------*/
+@media only screen and (min-width: 600px) {
+html {
+	background-size: 125%;
+}
+}
+
+@media only screen and (min-width: 768px) {
+html {
+	background-size: contain;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+html {
+	background-size: 95rem;
+}
+body {
+	font-size: 1.125em;
+	line-height: 1.6;
+}
+}
+/* --------------------------------- #Typography Elements
+--------------------------------- */
+/*
+* Basic styling for all typography elements
+*
+* [1] Fallback and global styling for headers
+*
+*/
+/*------------ links
+-------------*/
+a {
+	color: #cc0000;
+	-webkit-text-decoration-skip: ink;
+	text-decoration-skip: ink;
+}
+a:visited {
+	color: maroon;
+}
+a:hover, a:focus {
+	color: #990000;
+}
+a:focus {
+	outline: 1px dotted #212121;
+	outline: -webkit-focus-ring-color auto 5px;
+	outline-style: auto;
+}
+a:active {
+	color: #660000;
+}
+/*------------ headings
+-------------*/
+h1, h2, h3, h4, h5, h6 {
+	font-family: Helvetica, Arial, sans-serif; /*[1]*/
+	margin: .75em 0 .25em 0;
+}
+h1 {
+	font-family: 'ISUCondBold';
+	font-size: 2.7em;
+	font-weight: normal;
+	margin-top: 0;
+}
+h2 {
+	font-family: 'ISUCondBold';
+	font-size: 2.15em;
+	font-weight: normal;
+}
+h3 {
+	font-family: 'ISUCondBold';
+	font-size: 1.7em;
+	font-weight: normal;
+}
+h1 em, h1 i, h2 em, h2 i, h3 em, h3 i {
+	font-family: 'ISUCondBold';
+	font-style: italic;
+}
+h4, h5, h6 {
+	font-family: 'ISUBold';
+	font-size: 1.1em;
+	font-weight: normal;
+}
+h4 em, h4 i, h5 em, h5 i, h6 em, h6 i {
+	font-family: 'ISUBoldItalic';
+}
+/*------------ misc typography tags
+-------------*/
+p {
+	margin: 0 0 1.5em 0;
+}
+abbr[title] {
+	border-bottom: 1px dotted;
+}
+b, strong {
+	font-family: 'ISUBold';
+	font-weight: normal;
+}
+i, em {
+	font-family: 'ISUItalic';
+	font-style: normal;
+}
+b i, i b, b em, em b, strong i, i strong, strong em, em strong {
+	font-family: 'ISUBoldItalic';
+	font-style: normal;
+	font-weight: normal;
+}
+dfn {
+	font-style: italic;
+}
+hr {
+	display: block;
+	background-color: gray;
+	border: 0;
+	height: 1px;
+	margin: 1em 0;
+	padding: 0;
+}
+ins {
+	background: #ffff99;
+	color: black;
+	text-decoration: none;
+}
+mark {
+	background: #ffff99;
+	color: black;
+	font-family: 'ISUBoldItalic';
+}
+/*------------------- #basic form element styling
+-------------------*/
+label {
+	display: block;
+	margin: 0 0 0 0;
+}
+input, textarea, select {
+	padding: .77em;
+	border: 1px solid #787878;
+}
+input:focus, textarea:focus, select:focus {
+	outline: 1px dotted #212121;
+	outline: -webkit-focus-ring-color auto 5px;
+	outline-style: auto;
+}
+input[type=radio], input[type=checkbox] {
+	display: inline;
+	height: 2em;
+	margin: 0;
+	vertical-align: middle;
+	width: 1em;
+}
+input[type=radio] + label, input[type=checkbox] + label {
+	display: inline;
+	float: none;
+}
+/*------------------- #basic table styling
+-------------------*/
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	margin-bottom: 1.5em;
+	width: 100%;
+}
+table caption {
+	font-family: 'ISUBold';
+	font-size: 1.25em;
+	margin-bottom: .3em;
+	text-align: left;
+}
+table tr:nth-child(even) {
+	background-color: #e6e6e6;
+}
+table td {
+	padding: .5em;
+	vertical-align: top;
+}
+table thead tr:nth-child(odd) {
+	background-color: transparent;
+	border-bottom: black 1px solid;
+}
+table th {
+	font-family: 'ISUBold';
+	padding: .5em;
+	text-align: left;
+}
+/*------------------- #600px mediaquery
+-------------------*/
+/*------------- Objects
+-------------*/
+/*
+* wrapping and constraining elements of page
+*/
+/* --------------------------------- #BODY
+--------------------------------- */
+#body {
+	background-color: white;
+}
+
+@media only screen and (min-width: 768px) { 
+#body {
+	position: relative;
+}
+}
+/* --------------------------------- FOOTER
+--------------------------------- */
+/* ----------------- #mobile
+-------------------- */
+
+/*-- footer --*/
+.o-footer__divider {
+	border-top: 1px solid black;
+	height: 3em;
+	margin: 4em 0 1.25rem 0;
+	position: relative;
+	text-align: center;
+}
+.o-footer__divider::before {
+	background-color: white;
+	display: block;
+	font-size: 4.375rem;
+	left: 50%;
+	padding: 0 2rem;
+	position: absolute;
+	top: -3.4rem;
+	transform: translateX(-50%);
+	content: "\ea00";
+}
+.o-footer__logo {
+	margin: 0 auto 2rem auto;
+	text-align: center;
+}
+.o-footer__regs {
+	margin: 0 1.25rem;
+	text-align: center;
+}
+.o-footer__regs a {
+	color: black;
+}
+.o-footer__regs a:hover {
+	color: gray;
+	text-decoration: none;
+}
+.o-footer__regs p:first-of-type {
+	margin-bottom: .8em;
+}
+.o-footer__regs #ou_de {
+	text-decoration: none;
+}
+
+/* ----------------- #xlarge media query
+-------------------- */
+@media only screen and (min-width: 1200px) { 
+.o-footer {
+	margin: 0 auto;
+	max-width: 1600px;
+}
+}
+/*------------------- #container and grid styling
+-------------------*/
+#container {
+    background-position: center top;
+    background-repeat: no-repeat;
+    background-size: 150%;
+}
+/* WE NEED TO CLEAN THIS UP AT SOME POINT */
+/*------------------- #container & row
+-------------------*/
+/** Clearfix for modern browsers (http://nicolasgallagher.com/micro-clearfix-hack/) [1] The space content is one way to avoid an Opera bug when the contenteditable attribute is included anywhere else in the document. Otherwise it causes space to appear at the top and bottom of elements that are clearfixed. [2] The use of `table` rather than `block` is only necessary if using `:before` to contain the top-margins of child elements. */
+.o-container {
+	margin-left: auto;
+	margin-right: auto;
+	max-width: 1200px;
+}
+.o-container::before {
+	content: ''; /* 1 */
+	display: table; /* 2 */
+}
+.o-container::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.o-container-fluid::before, .o-row::before {
+	content: '';
+	display: table;
+}
+.o-container-fluid::after, .o-row::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+/*------------- Components
+-------------*/
+/*
+* specific element chunks of page build using classes
+*/
+
+/*------------------- #Site Branding
+-------------------*/
+/**
+* Styling for the site name/branding below the iGuide, above the mast navigation
+*
+*/
+.c-site-branding {
+	padding: 0 1.25rem 1.25rem 1.25rem;
+}
+.c-site-branding p {
+	margin-bottom: 0;
+}
+.c-site-branding__title {
+	font-size: 1.6875em;
+	margin: .625rem 0 1.25rem 0;
+}
+.c-site-branding__title a {
+	color: black;
+	text-decoration: none;
+}
+.c-site-branding__title a:hover, .c-site-branding__title a:visited {
+	color: black;
+	text-decoration: underline;
+}
+
+/*-------- #custom media query
+--------*/
+@media only screen and (min-width: 450px) { 
+.c-site-branding--my {
+	display: flex;
+	justify-content: space-between;
+}
+}
+
+/*-------- #extra large media query
+--------*/
+@media only screen and (min-width: 1200px) { 
+.c-site-branding {
+	margin: 0 auto;
+	max-width: 1200px;
+}
+}
+/*------------------- #University Logo
+-------------------*/
+/**
+* Styling for the University logo
+* Logo is in the footer of the ISU v4 template
+* Logo consists of three parts (as established in the ISU Graphic Standards)
+** [1] Seal
+** [2] University Logotype
+** [3] Subscript
+*
+*/
+.c-university-logo { font-size: 0; }
+
+.c-university-logo__link { display: inline-block; text-decoration: none; }
+
+.c-university-logo__seal { /* [1] */ display: inline-block; width: 5.2rem; margin-right: .5rem; vertical-align: middle; }
+
+.c-university-logo__image { background-color: #d40000; border-radius: 50%; display: block; padding: .2rem; width: 100%; }
+
+.c-university-logo__text { display: inline-block; text-align: left; vertical-align: middle; margin-left: 7px; }
+
+.c-university-logo__logotype { /* [2] */ color: black; font-family: 'ISULogoSerif'; font-size: 1.8rem; line-height: 1; word-spacing: -0.25rem; }
+
+.c-university-logo__subscript { /* [3] */ color: #d40000; font-family: 'ISUSerifItalic'; font-size: .9rem; line-height: 1.75; }
+/*------------- Utilities
+-------------*/
+/*
+* helper classes that are not tied to specific elements
+*/
+/*------------------ #background styling utilities
+-------------------*/
+
+.u-white {
+	background-color: white; margin: 3em auto 0em auto;
+}
+.u-red-btm-border {
+	border-bottom: 5px solid #CC0000;
+}
+
+/*------------------- #print styling
+-------------------*/
+@media print { /*--- whole page ---*/
+* {
+	background: transparent !important;
+	color: black !important;
+	filter: none !important;
+	-ms-filter: none !important;
+	font-family: Arial, sans-serif !important;
+	text-shadow: none !important;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+@page {
+	margin: 0.5cm;
+}
+/*--- typography ---*/
+h1, h2, h3, h4, h5, h6 {
+	font-weight: bold;
+}
+h1 {
+	font-size: 21px;
+}
+h2 {
+	font-size: 18px;
+}
+h3 {
+	font-size: 16px;
+}
+h4, h5, h6 {
+	font-size: 14px;
+}
+h2, h3 {
+	page-break-after: avoid;
+}
+p, h2, h3 {
+	orphans: 3;
+	widows: 3;
+}
+b, strong {
+	font-weight: bold;
+}
+i, em {
+	font-style: italic;
+}
+b i, i b, b em, em b, strong i, i strong, strong em, em strong {
+	font-style: italic;
+	font-weight: bold;
+}
+a:visited, a:focus, footer a:visited, footer a:focus {
+	color: #444444 !important; /* Black prints faster: sanbeiji.com/archives/953 */
+	text-decoration: underline;
+}
+a#ou_login, footer a#ou_login {
+	text-decoration: none;
+}
+a.btn_int, footer a.btn_int {
+	display: none;
+}
+#body a[href]:after {
+	content: " (" attr(href) ")";
+}
+#body abbr[title]:after {
+	content: " (" attr(title) ")";
+}
+.ir a:after, a[href^="javascript:"]:after, a[href^="#"]:after {
+	content: ""; /* Don't show links for images, or javascript/internal links */
+}
+pre, blockquote {
+	border: 1px solid #999;
+	page-break-inside: avoid;
+}
+thead {
+	display: table-header-group; /*css-discuss.incutio.com/wiki/Printing_Tables */
+}
+tr, img {
+	page-break-inside: avoid;
+}
+img {
+	max-width: 100% !important;
+}
+/*--- elements and components ---*/
+nav, .c-hero picture, .c-hero__caption, .c-slider-mult, .c-media-text-overlay, .c-resources-footer, .c-link-cloud, .c-vhalf__img, .c-media-text-block__image, .c-media-text-block__icon, .c-image-link, .news-item-mid figure, .news-thumb-item-mid figure, .o-footer__nav, .o-footer__nav--admissions, .o-footer__social {
+	display: none;
+}
+.c-hero {
+	max-width: 100%;
+}
+.c-hero__text {
+	position: relative;
+	right: 0;
+	top: 0;
+	transform: none;
+	width: 100%;
+}
+.c-hero__section, .c-hero__headline, .c-hero__subtext {
+	display: block;
+}
+svg {
+	fill: black;
+}
+}
+/*------------------- #spacing utilities
+-------------------*/
+
+.u-row-inset-margin {
+	width: 80%;
+	margin: 4em auto;
+}
+
+/*-------- #large media query
+--------*/
+@media only screen and (min-width: 960px) { 
+.u-row-inset-margin {
+	max-width: 1200px;
+	margin-left: auto;
+	margin-right: auto;
+}
+}
+/*iGuide CSS*/
+.isu-iguide {
+	background: transparent !important;
+	font: normal normal 100%/1.5 'ISUBold', Helvetica, Arial, sans-serif;
+	font-size: 14px
+}
+.isu-iguide * {
+	box-sizing: border-box
+}
+.isu-iguide-float {
+	height: 50px;
+	position: relative;
+	width: 100%
+}
+.isu-iguide-row {
+	height: 50px;
+	left: 0;
+	position: absolute;
+	top: 0;
+	width: 100%;
+	z-index: 1000
+}
+.isu-iguide-emergency .isu-iguide-row {
+	top: 40px
+}
+.isu-iguide-container {
+	margin: 0 auto;
+	max-width: 1200px
+}
+.isu-iguide-col-1 {
+	float: left
+}
+.isu-iguide-col-2 {
+	float: right;
+	margin-right: 20px
+}
+.isu-iguide-home {
+	color: #C00;
+	font-family: 'ISULogoSerif', Times News Roman, serif;
+	font-size: 21px;
+	line-height: 50px;
+	margin-left: 20px;
+	text-decoration: none;
+	word-spacing: -.25rem
+}
+.isu-iguide-home:visited, .isu-iguide-home:active {
+	color: #C00
+}
+.isu-iguide-home:hover, .isu-iguide-home:focus {
+	color: #900;
+	text-decoration: underline
+}
+.isu-iguide-home::before {
+	background-image: url(simplified-seal-30px-on-white.svg);
+	content: "";
+	display: inline-block;
+	height: 30px;
+	margin: 10px 8px 0 0;
+	vertical-align: top;
+	width: 30px;
+}
+/*pies background*/
+.u-gradient-pies {
+	background: linear-gradient(to bottom, rgba(255,255,255,0.25) 0%, rgba(255,255,255,0.26) 8.1%, rgba(255,255,255,0.286) 15.5%, rgba(255,255,255,0.328) 22.5%, rgba(255,255,255,0.382) 29%, rgba(255,255,255,0.444) 35.3%, rgba(255,255,255,0.514) 41.2%, rgba(255,255,255,0.588) 47.1%, rgba(255,255,255,0.662) 52.9%, rgba(255,255,255,0.736) 58.8%, rgba(255,255,255,0.806) 64.7%, rgba(255,255,255,0.868) 71%, rgba(255,255,255,0.922) 77.5%, rgba(255,255,255,0.964) 84.5%, rgba(255,255,255,0.99) 91.9%, #ffffff 100%), #fff url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='60' viewBox='0 0 60 60'%3E%3Cg fill-rule='evenodd'%3E%3Cg fill='%23d6d6d6' fill-opacity='0.4' fill-rule='nonzero'%3E%3Cpath d='M29 58.58l7.38-7.39A30.95 30.95 0 0 1 29 37.84a30.95 30.95 0 0 1-7.38 13.36l7.37 7.38zm1.4 1.41l.01.01h-2.84l-7.37-7.38A30.95 30.95 0 0 1 6.84 60H0v-1.02a28.9 28.9 0 0 0 18.79-7.78L0 32.41v-4.84L18.78 8.79A28.9 28.9 0 0 0 0 1.02V0h6.84a30.95 30.95 0 0 1 13.35 7.38L27.57 0h2.84l7.39 7.38A30.95 30.95 0 0 1 51.16 0H60v27.58-.01V60h-8.84a30.95 30.95 0 0 1-13.37-7.4L30.4 60zM29 1.41l-7.4 7.38A30.95 30.95 0 0 1 29 22.16 30.95 30.95 0 0 1 36.38 8.8L29 1.4zM58 1A28.9 28.9 0 0 0 39.2 8.8L58 27.58V1.02zm-20.2 9.2A28.9 28.9 0 0 0 30.02 29h26.56L37.8 10.21zM30.02 31a28.9 28.9 0 0 0 7.77 18.79l18.79-18.79H30.02zm9.18 20.2A28.9 28.9 0 0 0 58 59V32.4L39.2 51.19zm-19-1.4a28.9 28.9 0 0 0 7.78-18.8H1.41l18.8 18.8zm7.78-20.8A28.9 28.9 0 0 0 20.2 10.2L1.41 29h26.57z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")
+}
+/*PeopleSoft*/
+.signonMain {padding: 0px; margin: 0px; }
+.centralloginfirst {font-size: .7em; text-align:center; font-style:italic;}
+
+/*Central Login*/
+button {background:none; border: none;}
+.login-link {
+	background-image: url(images/ISU/login_buttons.png);
+	background-position: 0 0;
+	background-size: cover;
+	display: block;
+	height: 85px;
+	margin: auto;
+	width: 240px
+}
+.login-link:hover, .login-link:focus {
+	background-position: 0 -85px;
+	background-position: 0 -5.3125rem
+}
+
+.login-link:active {
+	background-position: 0 -170px;
+	background-position: 0 -10.625rem
+}
+.login-link-help {
+	margin-top: -30px;
+	margin-top: -1.875rem;
+	font-size: .8125rem;
+}
+/*Welcome to Campus Solutions*/
+.c-mod-header__title, .c-mod-header__content, .c-mod-header__nav {
+	text-align: center;
+}
+
+@media only screen and (min-width: 960px) {
+.c-mod-header__sub-heading {
+	font-size: 1.1rem;
+}
+}
+
+@media only screen and (min-width: 600px) {
+.u-header--row-dark::before, .u-header--row-dark::after {
+	border-color: black;
+}
+}
+
+@media only screen and (min-width: 360px) {
+.c-mod-header__sub-heading {
+	font-size: 1.1em;
+}
+}
+/*Intro text and header*/
+.u-text--intro {
+	font-family: 'ISULight';
+	font-size: 1.25em;
+}
+/*System Alerts*/
+p.noalerts {text-align: center !important; font-family: 'ISUItalic'; font-weight: lighter;}
+
+.statusBarRed {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #660000; color: #660000; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #f1b9b9;  }
+.statusBarRed a {color: #660000;}
+.statusBarBlue {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #324453; color: #324453; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #e6e6e6;}
+.statusBarBlue a {color: #324453;}
+.statusBarGreen {display: inline-block; width: 100%; border-radius: .25em; border: solid .25em #294a2a;  color: #294a2a; box-sizing: border-box; padding: 1.1rem 1.25rem 1rem; line-height: 1.5; font-weight: bold; margin-top: 10px; margin-bottom: 10px; background-color: #d2e6d3;}
+.statusBarRed a:hover, .statusBarBlue a:hover, .statusBarGreen a:hover {text-decoration: none;}
+.operational::before {content: "\e204"; color: #294a2a; float: right; position: relative; border:}
+.degraded_performance::before {content: "\e016"; color: #660000; float: right; position: relative; display: inline-block;}
+.partial_outage::before {content: "\e206"; color: #660000; float: right; position: relative; display: inline-block;}
+.major_outage::before {content: "\e208"; color: #660000; float: right; position: relative; display: inline-block;}
+.maintenance::before {content: "\e022"; color: #324453; float: right; position: relative; display: inline-block;}
+.date {font-size: .9em; color: #324453; font-family:'ISUItalic'; font-weight: lighter; display: inline-block;}
+
+.u-link--chevron {font-family: 'ISUCondBold'; display: block;}
+.u-link--chevron::after {
+    content: "\e005";
+    display: inline-block;
+    font-size: .6em;
+    padding-left: .25em;
+    vertical-align: middle;
+    white-space: nowrap;
+}
+.u-link--chevron:hover::after {
+    transform:translateX(3px);
+    transition: all .3s ease 0s;
+}
+
+/* Resources */
+.c-centered {text-align: center;}
+.u-v-margin-20 {margin-top: 1.25rem; margin-bottom: 1.25rem;}
+.c-inline-list {margin: 0; padding: 0; list-style-type: none;}
+@media only screen and (min-width: 600px) {.c-inline-list__list-item { display: inline; }}
+@media only screen and (min-width: 600px) {.c-inline-list--divider .c-inline-list__list-item::after {content: '\2022'; padding: .5rem;}}
+@media only screen and (min-width: 600px) {.c-inline-list--divider .c-inline-list__list-item:last-of-type::after {content: '';}}
+@media only screen and (max-width: 599px) {.o-row .u-white {margin: 0em auto;}}
+
+.o-row::before {
+	content: '';
+	display: table;
+}
+.o-row::after {
+	content: '';
+	display: table;
+	clear: both;
+}
+.u-row-v-margin {
+	margin: 2em 0em 2em 0em;
+}
+.u-black-stripe--bg {
+	background: #000 url(images/ISU/diagonal-grey.jpg) repeat 0 0;
+	color: inherit;
+}
+.u-v-em-2 {
+	display: block;
+	height: 2rem;
+}
+.u-header--row-dark {
+	color: black;
+}
+.u-header--row {
+	font-size: 2.25rem;
+	margin-top: 0;
+	text-align: center;
+}
+.u-hv-padding-20 {
+	padding: 1.25rem;
+}
+.u-row-h-to-inset-margin {
+	padding: 0 1.25rem;
+}
+.u-no-bullets {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+}
+.c-no-results {
+	background: white;
+	border: 2px dashed #bfbfbf;
+	border-radius: 1em;
+}
+.isu-iguide-menu-btn {
+	display: none !important;
+}
+.c-no-results__message li ~ li {
+	margin: 2em 0em 0em 0em;
+	font-size: .95em;
+}
+.c-no-results__message li p {
+	margin: 0em 0em 0em 0em;
+	font-size: .95em;
+}
+.c-no-results__message font li {
+	margin: 0em 0em 0em 0em;
+	font-size: .95em;
+}
+.c-no-results__message font p a {
+	margin: 0em 0em 0em 0em;
+	font-size: .95em;
+}
+.c-no-results__message font blockquote {
+	margin: .5em 0em 0em 1.5em;
+	font-size: .95em;
+}
+.c-no-results__message li a {
+	text-decoration: none;
+	font: normal normal 110%/1.5 "ISURegular", Helvetica, Arial, sans-serif;
+	margin: .75em 0 .25 0;
+}
+
+.c-no-results__message li a:hover {
+	text-decoration:underline;
+}
+
+@media only screen and (min-width: 600px) {
+.u-row-h-to-inset-margin {
+	margin: 0em auto;
+	max-width: 800px;
+	padding: 0;
+	width: 80%;
+}
+}
+
+@media only screen and (min-width: 600px) {
+.u-header--row-dark::before, .u-header--row-dark::after {
+	border-color: black;
+}
+}
+
+@media only screen and (min-width: 600px) {
+.u-header--row::before, .u-header--row::after {
+	border-bottom: 2px solid black;
+	content: '';
+	display: inline-block;
+	margin: 0 .5em;
+	max-width: 80px;
+	vertical-align: middle;
+	width: 8.5%;
+}
+}
+
+@media only screen and (min-width: 1200px) {
+.c-site-branding {
+    margin: 0 auto;
+    max-width: 1165px;
+	}}
+
+/*LDAP Login*/
+#ldap-login {display: none;}
+#ldap-login label {width: 12.5em; max-width: 100%; margin: 0px auto; text-align: left; padding: 1em 0em 0em 0em;}
+
+/* buttons */
+.button {
+	background: #cc0000;
+	padding: 0.3em 1em 0.3em 1em !important;
+	font-size: 1.1em;
+	margin: 0 0 0 0;
+	color: #ffffff;
+	border: none;
+	font-weight: normal;
+	TEXT-DECORATION: none;
+	border-radius: .25em;
+	box-sizing: content-box;
+}
+.button:focus, .button:hover, .button:active {
+	background: #990000;
+	border: none;
+	TEXT-DECORATION: none;
+}
+.button::-moz-focus-inner {
+/* FF: remove outline on focus */
+border: none;
+outline: none;
+ TEXT-DECORATION: none;
+}
+.button:-moz-focusring {
+/* FF: allow focus to be seen in highcontrast mode*/
+border: 2px inset transparent;
+outline: none;
+}
+ @-moz-document url-prefix() {
+ .button {
+letter-spacing:0.02em;
+line-height: 1.2em;/* FF only */
+}
+}
+
+/*Structural styles common to all UI messages, you can alter the size of the vertical margin to suit your purposes, we generally use a 20px (1.25rem) or 40px (2.5rem) vertical margin depending on the context.*/
+.c-ui-message {
+  border-radius: .25rem;
+  margin: 2.5rem auto 1rem auto;
+  padding: .625rem 1.25rem;
+  width: 800px;
+  max-width: 80%;
+}
+
+/* Cosmetic styles specific to the 'Danger' alert type */
+.c-ui-message--danger {
+  background-color: #F1B9B9;
+  border: 1px solid #6F0000;
+  color: #6F0000;
+}
+
+/* Remove margin from heading */
+.c-ui-message__type {
+  margin: 0;
+}
+
+/* Remove underline on hover for any link in the UI message */
+.c-ui-message a:hover {
+  text-decoration: none;
+}
+
+/* Specifies the link color for 'Danger' type alerts */
+.c-ui-message--danger a {
+  color: #6F0000 !important;
+}
+
+/* Remove bottom margin from the last <p class="c-ui-message__text"> element. (If necessary, you can alternatively use .c-ui-message p:last-of-type {} here instead of putting the .c-ui-message__text class on every <p> element) */
+.c-ui-message__text:last-of-type {
+  margin-bottom: 0;
+}

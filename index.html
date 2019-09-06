@@ -1,200 +1,116 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
-<script src="chrome-extension://ljdobmomdgdljniojadhoplhkpialdid/prompt.js"></script>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-
-    <meta http-equiv="Content-Style-Type" content="text/css">
-    <meta http-equiv="Content-Script-Type" content="text/javascript">
-    <title>Welcome to ReggieNet</title>
-    <link href="./WelcometoReggieNet_Files/loginStyles.css" rel="stylesheet" type="text/css">
-    <link href="./WelcometoReggieNet_Files/portal.css" rel="stylesheet" type="text/css">
-    <script src="./WelcometoReggieNet_Files/saved_resource" type="text/javascript">// JQUERY //</script>
-    <script type="text/javascript" src="./WelcometoReggieNet_files/customize.php"></script>
-    <script src="https://storage.googleapis.com/feednami-static/js/feednami-client-v1.0.1.js"></script>
-    <script LANGUAGE="JavaScript">
-        function ISUAlerts() {
-
-            //get feed to parse
-            var url = "https://alerts.illinoisstate.edu/xml/";
-
-            feednami.load(url, function (result) {
-                if (result.error) {
-                    console.log(result.error)
-                }
-                else {
-                    var entries = result.feed.entries;
-                    var html = '';
-                    var casdown = 0;
-
-                    for (var i = 0; i < entries.length; i++) {
-                        var entry = entries[i];
-                        //console.dir(entry);
-                       // To set this page to no longer recognize the "central login maintenance" tech alerts as outages comment out lines 35 and 36 and uncomment lines 37 and 38
-			 if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1){
-                               if (entry.title.toUpperCase().indexOf("CENTRAL LOGIN") > -1) {
-                      // if (entry.title.toUpperCase().indexOf("REGGIENET") > -1 || entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1){
-                      //      if (entry.title.toUpperCase().indexOf(/^(?!.*MAINTENANCE).*CENTRAL LOGIN*$/) > -1) {
-                                casdown = 1;
-                            }
-                            html += ("<ul><a href='" + entry.link + "'><b>" + entry.title + "</b></a></ul><br>"); 
-							<!-- <br/><font size='-1'>" + entry.description + "</font></li> -->
-                        }
-                    }
-                    //alert ("HTML to insert: " + html);
-                    if (html.length < 1) {
-                        html = ("<li>No alerts are active at this time</li>");
-						$(document).ready(function(){
-						// $(".reggie-login").hide();
-						})
-                    } else if (casdown) {
-						document.getElementById("alternatelink").setAttribute("role", "alert");
-                        document.getElementById("alternatelink").innerHTML = "<br><br>The <a href='https://reggienettest.illinoisstate.edu/x/JmFxxn' class='link'>ReggieNet Login</a> button will allow you to access ReggieNet while the regular login system is undergoing maintenance.<br><br><br>";
-						document.getElementById("reggie-login").style.display = 'inline-block';
-						$(document).ready(function(){
-    $(".login-link").hide();
-    // $(".reggie-login").css({visibility = 'visible'});
-    $(".alt-login").removeClass("visuallyhidden");
-      
-})
-									// document.getElementsByClassName("reggie-login")[0].className += " alt-login";
-                    }
-
-						document.getElementById("ReggieNetAlerts").innerHTML = html;
-                }
-            })
-        }
-    </script>
-    <script type="text/javascript" src="./WelcometoReggieNet_Files/jquery.min.js.download"></script>
-    <script type="text/javascript" src="./WelcometoReggieNet_Files/iguide.js.download"></script>
-</head>
-<body onload="ISUAlerts();">
-<div id="iguide-filler"></div>
-<div id="iguide-float">
-    <div class="iguide-link-container"><a class="iguide-isu"
-                                          href="http://illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">IllinoisState.edu</a>
-        <span class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-admissions"
-                                                    href="http://admissions.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">Admissions</a><span
-                class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-map"
-                                                      href="http://maps.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">Maps</a><span
-                class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-news"
-                                                      href="https://news.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">News</a><span
-                class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-events"
-                                                      href="http://events.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">Events</a><span
-                class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-employment"
-                                                      href="http://hr.illinoisstate.edu/prospective/opportunities/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">Employment</a><span
-                class="iguide-link-divider"></span><a class="iguide-link" id="iguide-link-search"
-                                                      href="http://search.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage">Search/A-Z</a>
-    </div>
-    <span class="iguide-link-divider"></span><a id="iguide-my-link" title="My Illinois State"
-                                                href="http://my.illinoisstate.edu/?utm_source=reggienet.illinoisstate.edu&amp;utm_medium=iguide&amp;utm_campaign=iguide+usage"><img
-        src="./WelcometoReggieNet_Files/my-red-dark.png" alt="My"></a></div>
-<div id="gatewayPage">
-    <div class="logoCON">
-        <img id="leftimg" src="./WelcometoReggieNet_Files/reggienet.svg" width="280" alt="ReggieNet" title=""
-             border="0">
-        <img id="rightimg" src="./WelcometoReggieNet_Files/logo_right.png" width="200" alt="" height="57" title=""
-             border="0">
-    </div>
-    <div id="inner_content">
-        <div id="alert_banner">
-            <ul id="techalertrss">
-                <p id="alternatelink" class="techalertrss"></p>
-            </ul>
-
-        </div>
-        <h1 class="visuallyhidden">ReggieNet Login</h1>
-        <div class="logoED">
-            <div id="loginBlock">
-                <!--block one start-->
-                <div class="module-box">
-                    <div class="module-top blue">
-                        <h2>Get started here...</h2>
-                    </div>
-                    <div class="module-content">
-                        <!--form method="post" action="/portal/xlogin" enctype="application/x-www-form-urlencoded" target="_parent">
-                          <br/><label for="eid">Username</label><input name="eid" id="eid" type="text" />
-                        <br/><label for="pw">Password</label><input name="pw" id="pw" type="password" />
-                        <br/><input id="butt" type="image" value="submit" src="images/loginButton.gif" alt="Log in" />
-                        </form-->
-						<a class="login-link" href="/portal/login" title="Click here to log in" alt="CentralLogin" enctype="application/x-www-form-urlencoded" target="_parent"></a>
-                        <a id="reggie-login" href="https://reggienettest.illinoisstate.edu/x/JmFxxn"
-						role="button" title="Click here to log in" alt="ReggieNet Login"
-                           enctype="application/x-www-form-urlencoded" target="_parent">ReggieNet Login</a><br><br>
-                    </div>
-                </div>
-                <!--block one end-->
-                <!--block two start-->
-                <div class="module-box">
-                <div class="module-top blue">
-                <h2>ReggieNet Alerts</h2>
-                </div>
-                <div class="module-content">
-				<span class="link-list">	
-				<ul class="navlist">
-                <li id="ReggieNetAlerts"></li>
-                </ul>
-                </span>
-                </div>
-                </div>
-                <!--block two end-->
-
-            </div>
-            <!--login block end-->
-            <!--welcome block start-->
-            <div id="welcomeMessage">
-                <div id="welcomeTitle">Gladly we Learn, Teach and Collaborate</div>
-                <div id="welcomeText"><p>Welcome to ReggieNet, Illinois State University's newest web-based learning and
-                    collaboration system. ReggieNet is powered by the University's installation of the Sakai learning
-                    management system, a feature-rich environment that provides tools for communication, assignment
-                    submission, tests and quizzes, project collaboration, and much more. Login to ReggieNet today and
-                    experience the potential of next generation collaborative learning environments.<br><br>To log in to
-                    the system, please click on the CentralLogin button and sign in using your ULID and ULID password.</p>
-
-                </div>
-                <br><br>
-
-                <!--welcome block end-->
-
-            </div>
-            <!--logoED block end-->
-
-        </div>
-
-
-        <div id="sbt-contentboundingbox"></div>
-    </div>
-
-    <div id="footer" role="contentinfo" style="border:none">
-        <div id="footerInfo">
-            <a href="http://sakaiproject.org/" target="_blank">
-                <img border="0" src="./WelcometoReggieNet_Files/sakai_powered.gif" alt="Powered by Sakai">
-                <span class="skip"> (Opens in a new window)</span>
-            </a>
-
-            <!-- end include Bottom -->
-        </div>
-        <div class="sakaiCopyrightInfo" style="margin-top: 0"><img border="0" alt="Illinois State University"
-                                                                   src="./WelcometoReggieNet_Files/footerReggieGrey.png" class="reggie-footer">
-            <div id="isu_bold"><span class="normal">©</span> Illinois State University</div>
-            <a href="http://illinoisstate.edu/diversity/" target="_blank">An equal opportunity/affirmative action
-                university encouraging diversity.</a> <br> <a
-                    href="http://illinoisstate.edu/downloads/web-privacy-statement-2010.pdf" target="_blank">Privacy
-                Statement</a> • <a
-                    href="https://confluence.sakaiproject.org/display/2ACC/Sakai+CLE+Current+Accessibility"
-                    target="_blank">Sakai Accessibility</a> • <a
-                    href="http://universitymarketing.illinoisstate.edu/identity/" target="_blank">Identity Standards</a>
-            • <a href="http://www.policy.ilstu.edu/technology/9-2.shtml" target="_blank">Appropriate Use Policy</a>
-            <div id="isu_bold">For questions,<a href="http://helpdesk.illinoisstate.edu/kb/1803/Overview_of_ReggieNet/">contact
-                us</a></div>
-        </div>
-
-    </div>
-
-
+<meta name="viewport" content="initial-scale=1"/>
+<meta charset="utf-8">
+<title id="title">ReggieNet</title>
+<link rel="stylesheet" type="text/css" href="WelcometoReggieNet_Files/index.css" />
+<link rel="shortcut icon" href="WelcometoReggieNet_Files/images/ISU/reggie.ico" type="image/x-icon" />
+<link rel="stylesheet" type="text/css" media="screen,print" href="https://iguides.illinoisstate.edu/css/style.css" />
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1/jquery.min.js"></script>
+	</head>
+<body>
+  <!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-N8R24C"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-N8R24C');</script>
+  <!-- End Google Tag Manager -->
+<nav role="navigation" aria-label="University"> 
+  <script type="text/javascript" src="https://iguides.illinoisstate.edu/university.js">// iGuide 2 //</script> 
+</nav>
+<!--googleoff: snippet-->
+<div id="container">
+<div class="o-row u-red-btm-border">
+  <header class="c-site-branding">
+    <p class="c-site-branding__title"><a href="/"><b id="subhead">ReggieNet</b></a></p>
+  </header>
 </div>
-<div id="iguide-blackout" style="width: 100%; height: 919px; top: 0px; left: 0px;"></div>
-
+<main role="main">
+  <div id="body" class="o-row">
+    <div class="o-row u-gradient-pies">
+    <header class="u-row-h-margin-20 u-row-v-margin">
+      <h1 class="visuallyhidden">ReggieNet</h1>
+      <span class="u-v-em-2">
+      <!-- Vertical spacing -->
+      </span>
+      <div class="c-mod-header__content">
+        <p class="u-text--intro" id="introtext">The learning management system for Illinois State University's students, faculty, and staff.</p>
+        	<!--CentralLogin-->
+		  <div id="central-login" class="central-login"> <a class="login-link" aria-label="Sign in using CentralLogin" id="login-link" href="https://reggienet.illinoisstate.edu/portal/login"><!--CentralLogin--></a>
+		 <br>
+          <div class="login-link-help"> <a class="u-small-text u-force-regular" href="https://isu.cherwellondemand.com/CherwellPortal/ISUSelfService/Command/Queries.GotoRecord?BusObId=KnowledgeArticle&amp;PublicId=1105" style="text-decoration: none;">What is CentralLogin?</a> </div>
+        </div>
+		<div id="ldap-login">
+		<div class="c-ui-message c-ui-message--danger" role="alert">
+  			<h2 class="c-ui-message__type">
+    			<span class="c-ui-message__title">Alternative Login</span>
+  			</h2>
+  			<div class="c-ui-message__content">
+    			<p class="c-ui-message__text">CentralLogin is unavailable or undergoing maintenance. This is an alternative way to sign in to ReggieNet.</p>
+  			</div>
+		</div>
+			<form action="https://reggienet.illinoisstate.edu/portal/xlogin" class="form_box" method="post" id="ldapsubmit">
+				<p><label for="eid">Username</label> <input id="eid" name="eid" size="20" type="text" value="" />
+				<label for="pw">Password</label> <input id="pw" name="pw" onfocus="this.passwordfocus = true; " size="20" type="password" value="" /></p>
+				<p><input class="button" id="submit" name="submit" type="submit" value="Sign in" /></p>
+			</form>
+      </div>
+		
+      
+     </div>
+    </header>
+  </div>
+  <div class="c-centered u-row-v-btm-margin">
+    <h2 class="u-header--row">Resources</h2>
+      <ul class="c-inline-list c-inline-list--divider u-v-margin-20">
+        <li class="c-inline-list__list-item">
+          <a target="_blank" href="https://ctlt.illinoisstate.edu/technology/reggienet/students/">Students</a>
+        </li>
+        <li class="c-inline-list__list-item">
+          <a target="_blank" href="https://ctlt.illinoisstate.edu/technology/reggienet/">Faculty</a>
+        </li>
+        <li class="c-inline-list__list-item">
+          <a target="_blank" href="https://ctlt.illinoisstate.edu/technology/reggienet/help/" target="_blank">Support</a>
+        </li>
+      </ul>
+  </div>
+  <div class="o-row u-white">
+    <section class="u-row-h-to-inset-margin u-row-v-margin">
+      <header>
+        <h2 class="u-header--row">System Alerts</h2>
+      </header>
+	  <span id="statusPageComponent"></span>
+	  <span id="statusPageIncidents"></span>
+      <span id="statusPageMaintenance"></span>
+	<a target="_blank" class="u-link--chevron" href="https://alerts.illinoisstate.edu">View Tech Alerts</a>
+	  </section>
+  </div>
+  </div>
+</main>
+</div>
+<footer role="contentinfo"><!--googleoff: snippet-->
+  <div class="o-row o-footer u-white">
+    <div class="o-footer__divider"><!--divider--></div>
+    <div class="o-footer__logo c-university-logo" > <a class="c-university-logo__link" href="https://illinoisstate.edu/">
+      <div class="c-university-logo__seal"> 
+        <img class="c-university-logo__image" src="WelcometoReggieNet_Files/images/ISU/illinoisstate-seal.svg" alt="" /> </div>
+      <div class="c-university-logo__text">
+        <div class="c-university-logo__logotype">Illinois State</div>
+        <div class="c-university-logo__logotype">university</div>
+        <div class="c-university-logo__subscript">Illinois' first public university</div>
+      </div>
+      </a> </div>
+    <div class="o-footer__regs">
+      <p><a style="text-decoration: none;" onclick="showLDAPlogin();" onkeypress="showLDAPlogin();" href="#top">&copy;</a> <span id="c_year">2019</span> Illinois State University, Normal, IL USA</p>
+      <p><a href="http://IllinoisState.edu/downloads/web-privacy-statement-2010.pdf">Privacy Statement</a> | <a href="http://www.policy.ilstu.edu/technology/9-2.shtml">Appropriate Use Policy</a> | <a href="https://illinoisstate.edu/accessibility/">Accessibility</a></p>
+    </div>
+  </div>
+</footer>
+<script type="text/javascript" src="https://cdn.statuspage.io/se-v2.js"></script>
+	<script type="text/javascript" src="WelcometoReggieNet_Files/index.js"></script>
 </body>
 </html>
