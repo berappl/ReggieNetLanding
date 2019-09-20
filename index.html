@@ -40,7 +40,7 @@
       <div class="c-mod-header__content">
         <p class="u-text--intro" id="introtext">The learning management system for Illinois State University's students, faculty, and staff.</p>
         	<!--CentralLogin-->
-		  <div id="central-login" class="central-login"> <a class="login-link" aria-label="Sign in using CentralLogin" id="login-link" href="https://reggienet.illinoisstate.edu/portal/login"><!--CentralLogin--></a>
+		  <div id="central-login" class="central-login"> <a class="login-link" aria-label="Sign in using CentralLogin" href="/portal/login"><!--CentralLogin--></a>
 		 <br>
           <div class="login-link-help"> <a class="u-small-text u-force-regular" href="https://isu.cherwellondemand.com/CherwellPortal/ISUSelfService/Command/Queries.GotoRecord?BusObId=KnowledgeArticle&amp;PublicId=1105" style="text-decoration: none;">What is CentralLogin?</a> </div>
         </div>
@@ -53,7 +53,7 @@
     			<p class="c-ui-message__text">CentralLogin is unavailable or undergoing maintenance. This is an alternative way to sign in to ReggieNet.</p>
   			</div>
 		</div>
-			<form action="/portal/xlogin" class="form_box" method="post" id="ldapsubmit">
+			<form action="/portal/xlogin" class="form_box" method="post">
 				<p><label for="eid">Username</label> <input id="eid" name="eid" size="20" type="text" value="" />
 				<label for="pw">Password</label> <input id="pw" name="pw" onfocus="this.passwordfocus = true; " size="20" type="password" value="" /></p>
 				<p><input class="button" id="submit" name="submit" type="submit" value="Sign in" /></p>
