@@ -117,12 +117,8 @@ window.addEventListener('load', function () {
 	var loginLink = document.getElementById('login-link')
 	if (hostname.indexOf('reggienetdev') >= 0) {
 		title.textContent, subhead.textContent = "ReggieNet - Dev";
-		ldapsubmit.action = "https://reggienetdev.illinoisstate.edu/portal/xlogin";
-		loginLink.href = "https://reggienetdev.illinoisstate.edu/portal/login";
 	} else if (hostname.indexOf('reggienettest') >= 0) {
 		title.textContent, subhead.textContent = "ReggieNet - Test";
-		ldapsubmit.action = "https://reggienettest.illinoisstate.edu/portal/xlogin";
-		loginLink.href = "https://reggienettest.illinoisstate.edu/portal/login";
 	} 
 
 });
