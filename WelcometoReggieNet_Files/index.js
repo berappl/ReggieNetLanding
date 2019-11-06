@@ -82,7 +82,7 @@ function setupStatusPage() {
 					})
 				}
 		//Show LDAP login and hide CentralLogin if maintenance status is in progress and Central Login is in the title//
-				if (sm.status == "in_progress" && sm.name.toUpperCase().includes("Central Login")) {
+				if (sm.status == "in_progress" && sm.name.toUpperCase().includes("CENTRAL LOGIN")) {
 					sm.components.forEach(function (item) {
 						if (item.name.indexOf(switchSystem) != -1) {
 							document.getElementById("ldap-login").style.display = "block";
